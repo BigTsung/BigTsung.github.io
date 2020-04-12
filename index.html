@@ -36,6 +36,8 @@
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
     >
       <!-- we use cors proxy to avoid cross-origin problems -->
+      <a-entity text="res/gltfPipline_draco_roger.glb"></a-entity>
+
       <a-nft
         type="nft"
         url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
@@ -45,7 +47,7 @@
         smoothThreshold="5"
       >
         <a-entity
-          gltf-model="url(res/gltfPipline_roger.glb)"
+          gltf-model="url(res/gltfPipline_draco_roger.glb)"
           scale="1 1 1"
           position="0 0 0"
           rotation="0 180 0"
