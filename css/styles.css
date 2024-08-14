@@ -10970,3 +10970,22 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+.bullet-item {
+  display: block;
+  padding-left: 24px; /* 控制第一行文字的縮進量 */
+  text-indent: -16px; /* 控制後續行的縮進量 */
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.bullet-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: black; /* 可以根據需要調整顏色 */
+  font-size: 0.9em; /* 控制符號大小 */
+  line-height: 1.2; /* 確保符號與文本對齊 */
+  width: 16px; /* 符號的固定寬度 */
+}
