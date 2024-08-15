@@ -10989,3 +10989,39 @@ section.resume-section .resume-section-content {
   line-height: 1.2; /* 確保符號與文本對齊 */
   width: 16px; /* 符號的固定寬度 */
 }
+
+.interests-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 15px; /* 控制圖片之間的間距 */
+}
+
+.interests-gallery img {
+  width: 100%; /* 確保圖片在小螢幕上適應 */
+  max-width: 220px; /* 設置圖片的最大寬度 */
+  height: auto; /* 自動調整高度，保持圖片比例 */
+  border-radius: 10px; /* 可選：為圖片添加圓角 */
+  object-fit: cover; /* 確保圖片填充容器，適合裁切需求 */
+}
+
+.libraries-container {
+  display: flex;
+  justify-content: space-between; /* 在三個區塊之間平均分配空間 */
+  flex-wrap: wrap; /* 如果螢幕寬度不夠，讓區塊換行 */
+  gap: 20px; /* 區塊之間的間距 */
+}
+
+.library-section {
+  flex: 1; /* 讓每個區塊等寬 */
+  min-width: 200px; /* 設置每個區塊的最小寬度，確保在小螢幕上不擠壓 */
+}
+
+.subheading {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.fa-ul {
+  padding-left: 20px; /* 調整項目符號的縮排 */
+}
