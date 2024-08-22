@@ -11228,3 +11228,15 @@ section.resume-section .resume-section-content {
   border-radius: 10px; /* 圓角效果 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果讓圖片更突出 */
 }
+
+.company-logo {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.company-logo-img {
+  /* width: 200px; */
+  max-width: 100px; /* 控制 Logo 大小，根據需求調整 */
+  height: auto;
+}
+
