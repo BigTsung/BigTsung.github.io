@@ -8092,6 +8092,13 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
+  font-size: 4rem;
+  color: #6c757d !important;
+}
+
+.text-chinese {
+  --bs-text-opacity: 1;
+  font-size: 4rem;
   color: #6c757d !important;
 }
 
@@ -11212,4 +11219,12 @@ section.resume-section .resume-section-content {
 /* #education .resume-section-content, */
 #projects .resume-section-content {
     padding-left: 40px; /* 確保與其他區塊的縮排一致 */
+}
+
+.experience-image {
+  width: 100%; /* 確保圖片在小螢幕上的自適應 */
+  max-width: 300px; /* 限制圖片最大寬度，根據需求調整 */
+  margin-top: 20px; /* 與上方文字保持距離 */
+  border-radius: 10px; /* 圓角效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果讓圖片更突出 */
 }
