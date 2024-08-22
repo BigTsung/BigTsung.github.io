@@ -11155,11 +11155,30 @@ section.resume-section .resume-section-content {
   margin-bottom: 30px;
 }
 
-.project-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.project-item-weekend-project {
+  border-left: 4px solid #ff9800;
+  padding-left: 20px;
+  margin-bottom: 30px;
 }
 
+.project-tag {
+  display: inline-block; /* 讓標籤顯示為塊狀元素 */
+  font-size: 0.75rem;
+  line-height: 1.6;
+  margin-right: 10px; /* 增加標籤之間的間距 */
+  margin-bottom: 15px;
+  padding: 5px 10px; /* 增加內邊距讓標籤看起來更舒適 */
+  background-color: #f1f1f1; /* 背景色，可根據需要調整 */
+  color: #333; /* 文字顏色 */
+  border-radius: 15px; /* 讓標籤有圓角效果 */
+  font-weight: 500; /* 讓文字更醒目 */
+  border: 1px solid #ddd; /* 添加輕微的邊框 */
+}
+
+.project-tag:hover {
+  background-color: #e2e2e2; /* 滑過時的背景色變化 */
+  cursor: pointer; /* 鼠標移過時顯示手型 */
+}
 .project-description {
   font-size: 1rem;
   line-height: 1.6;
@@ -11184,4 +11203,13 @@ section.resume-section .resume-section-content {
 .btn-primary:hover {
   background-color: #0056b3;
   border-color: #004494;
+}
+
+.project-badge.badge-weekend-project {
+  background-color: #ff9800; /* 自訂Weekend Project的顏色 */
+}
+
+/* #education .resume-section-content, */
+#projects .resume-section-content {
+    padding-left: 40px; /* 確保與其他區塊的縮排一致 */
 }
