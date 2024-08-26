@@ -11073,6 +11073,7 @@ section.resume-section .resume-section-content {
 
 .project-image {
   width: 100%;
+  height:;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -11197,6 +11198,19 @@ section.resume-section .resume-section-content {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.small-project-image {
+  width: 30%; /* 縮小每張圖片的寬度，以留出空間 */
+  height: auto;
+  margin-right: 10px; /* 設置圖片之間的間距 */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 確保最後一張圖片不會有多餘的右側間距 */
+.small-project-image:last-child {
+  margin-right: 0;
 }
 
 .btn-primary {
