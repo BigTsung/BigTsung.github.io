@@ -11125,9 +11125,9 @@ section.resume-section .resume-section-content {
 }
 
 .project-badge {
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-size: 1.3rem;
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: 1.4rem;
   margin-right: 15px;
   color: #fff;
   font-weight: 700;
@@ -11221,11 +11221,11 @@ section.resume-section .resume-section-content {
 }
 
 .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #aaaaaa;
+  border-color: #aaaaaa;
   font-size: 1rem;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 30px;
 }
 
 .btn-primary:hover {
