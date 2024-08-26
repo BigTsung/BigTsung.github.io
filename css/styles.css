@@ -11062,7 +11062,7 @@ section.resume-section .resume-section-content {
 
 /* Projects Section */
 #projects {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   padding: 60px 0;
 }
 
@@ -11111,10 +11111,10 @@ section.resume-section .resume-section-content {
 }
 
 /* Projects Section */
-#projects {
+/* #projects {
   background-color: #f8f9fa;
   padding: 60px 0;
-}
+} */
 
 .project-category-title {
   font-size: 1.5rem;
@@ -11194,14 +11194,14 @@ section.resume-section .resume-section-content {
 }
 
 .project-image {
-  width: 100%;
+  width: 90%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .small-project-image {
-  width: 30%; /* 縮小每張圖片的寬度，以留出空間 */
+  width: 28.5%; /* 縮小每張圖片的寬度，以留出空間 */
   height: auto;
   margin-right: 10px; /* 設置圖片之間的間距 */
   border-radius: 10px;
@@ -11211,6 +11211,13 @@ section.resume-section .resume-section-content {
 /* 確保最後一張圖片不會有多餘的右側間距 */
 .small-project-image:last-child {
   margin-right: 0;
+}
+
+.project-divider {
+  border: 0;
+  height: 1px;
+  background: #bbb;
+  margin: 40px 0; /* 控制線條上下的間距 */
 }
 
 .btn-primary {
