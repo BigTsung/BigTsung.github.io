@@ -11208,6 +11208,14 @@ section.resume-section .resume-section-content {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.small_40-project-image {
+  width: 40%; /* 縮小每張圖片的寬度，以留出空間 */
+  height: auto;
+  margin-right: 20px; /* 設置圖片之間的間距 */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* 確保最後一張圖片不會有多餘的右側間距 */
 .small-project-image:last-child {
   margin-right: 0;
