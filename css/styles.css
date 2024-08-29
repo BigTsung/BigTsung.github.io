@@ -11224,6 +11224,23 @@ section.resume-section .resume-section-content {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.small_70-project-image {
+  width: 70%; /* 縮小每張圖片的寬度，以留出空間 */
+  height: auto;
+  margin: 0 auto 20px 50px; /* 上下居中, 下方間距, 向左移動10px */
+  display: block; /* 確保圖片作為一個區塊元素 */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.small_60-project-image {
+  width: 60%; /* 縮小每張圖片的寬度，以留出空間 */
+  height: auto;
+  margin: 0 auto 20px 50px; /* 上下居中, 下方間距, 向左移動10px */
+  display: block; /* 確保圖片作為一個區塊元素 */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 /* 確保最後一張圖片不會有多餘的右側間距 */
 .small-project-image:last-child {
