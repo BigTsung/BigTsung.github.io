@@ -42,8 +42,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  /* --bs-primary-rgb: 189, 93, 56; */
-  --bs-primary-rgb: 85, 107, 47;
+  /* --bs-primary-rgb: 189, 93, 56;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -51,7 +50,14 @@
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
-  --bs-white-rgb: 255, 255, 255;
+  --bs-white-rgb: 255, 255, 255; */
+  
+  /* --bs-primary-rgb: 191, 161, 119; */
+   /* Updated primary color */
+   --bs-primary-rgb: 72, 106, 131; /* #bfa177 */
+   --bs-secondary-rgb: 191, 161, 119; /* #486a83 */
+   --bs-success-rgb: 211, 204, 188; /* #d3ccbc */
+  
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
@@ -8038,7 +8044,7 @@ textarea.form-control-lg {
 /* rtl:end:remove */
 .text-primary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-secondary {
@@ -11135,7 +11141,7 @@ section.resume-section .resume-section-content {
 }
 
 .badge-aemass {
-  background-color: #444444;
+  background-color: #bfa177;
 }
 
 .badge-xpec {
@@ -11143,11 +11149,11 @@ section.resume-section .resume-section-content {
 }
 
 .badge-academic {
-  background-color: #28a745;
+  background-color: #d3ccbc;
 }
 
 .project-item-aemass {
-  border-left: 4px solid #444444;
+  border-left: 4px solid #bfa177;
   padding-left: 20px;
   margin-bottom: 30px;
 }
@@ -11159,13 +11165,13 @@ section.resume-section .resume-section-content {
 }
 
 .project-item-academic {
-  border-left: 4px solid #28a745;
+  border-left: 4px solid #d3ccbc;
   padding-left: 20px;
   margin-bottom: 30px;
 }
 
 .project-item-weekend-project {
-  border-left: 4px solid #ff9800;
+  border-left: 4px solid #486a83;
   padding-left: 20px;
   margin-bottom: 30px;
 }
@@ -11277,7 +11283,7 @@ section.resume-section .resume-section-content {
 }
 
 .project-badge.badge-weekend-project {
-  background-color: #ff9800; /* 自訂Weekend Project的顏色 */
+  background-color: #486a83; /* 自訂Weekend Project的顏色 */
 }
 
 /* #education .resume-section-content, */
