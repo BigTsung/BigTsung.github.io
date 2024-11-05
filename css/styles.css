@@ -2853,20 +2853,23 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #bd5d38;
-  --bs-btn-border-color: #bd5d38;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #c77556;
-  --bs-btn-hover-border-color: #c46d4c;
-  --bs-btn-focus-shadow-rgb: 161, 79, 48;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #ca7d60;
-  --bs-btn-active-border-color: #c46d4c;
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: rgb(72, 106, 131);
+  --bs-btn-border-color: rgb(72, 106, 131);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: rgb(92, 126, 151);
+  --bs-btn-hover-border-color: rgb(82, 116, 141);
+  --bs-btn-focus-shadow-rgb: 72, 106, 131;
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: rgb(82, 116, 141);
+  --bs-btn-active-border-color: rgb(82, 116, 141);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #bd5d38;
-  --bs-btn-disabled-border-color: #bd5d38;
+  --bs-btn-disabled-bg: rgb(72, 106, 131);
+  --bs-btn-disabled-border-color: rgb(72, 106, 131);
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 30px;
 }
 
 .btn-secondary {
@@ -2987,8 +2990,24 @@ textarea.form-control-lg {
   --bs-btn-disabled-bg: #212529;
   --bs-btn-disabled-border-color: #212529;
 }
-
+/* --bs-primary-rgb: 72, 106, 131; */
 .btn-outline-primary {
+  --bs-btn-color: rgb(72, 106, 131); /* 改成新顏色 */
+  --bs-btn-border-color: rgb(72, 106, 131); /* 改成新顏色 */
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: rgb(72, 106, 131); /* 改成新顏色 */
+  --bs-btn-hover-border-color: rgb(72, 106, 131); /* 改成新顏色 */
+  --bs-btn-focus-shadow-rgb: 72, 106, 131; /* 改成新顏色的RGB值 */
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: rgb(72, 106, 131); /* 改成新顏色 */
+  --bs-btn-active-border-color: rgb(72, 106, 131); /* 改成新顏色 */
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: rgb(72, 106, 131); /* 改成新顏色 */
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: rgb(72, 106, 131); /* 改成新顏色 */
+  --bs-gradient: none;
+}
+/* .btn-outline-primary {
   --bs-btn-color: #bd5d38;
   --bs-btn-border-color: #bd5d38;
   --bs-btn-hover-color: #000;
@@ -3003,7 +3022,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #bd5d38;
   --bs-gradient: none;
-}
+} */
 
 .btn-outline-secondary {
   --bs-btn-color: #6c757d;
@@ -11104,14 +11123,6 @@ section.resume-section .resume-section-content {
   margin-bottom: 15px;
 }
 
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  font-size: 1rem;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
 .btn-primary:hover {
   background-color: #0056b3;
   border-color: #004494;
@@ -11267,14 +11278,6 @@ section.resume-section .resume-section-content {
   height: 1px;
   background: #bbb;
   margin: 40px 0; /* 控制線條上下的間距 */
-}
-
-.btn-primary {
-  background-color: #aaaaaa;
-  border-color: #aaaaaa;
-  font-size: 1rem;
-  padding: 10px 20px;
-  border-radius: 30px;
 }
 
 .btn-primary:hover {
