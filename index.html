@@ -37,13 +37,12 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li> -->
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about"><span id="nav-about">About</span></a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience"><span id="nav-experience">Experience</span></a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills"><span id="nav-skills">Skills</span></a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects"><span id="nav-projects">Projects</span></a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education"><span id="nav-education">Education</span></a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests"><span id="nav-interests">Interests</span></a></li>
                 </ul>
             </div>
         </nav>
@@ -58,10 +57,13 @@
                         <span class="text-chinese"> - 邱昱璁</span>
                     </h1>
                     <div class="subheading mb-5">
-                      New Taipei City, Taiwan · 0919-283696 ·
-                        <a class="text-primary" href="mailto:yutsungchiu@email.com">yutsungchiu@email.com</a>
+                        <span id="location">New Taipei City, Taiwan</span> · <span id="phone">0919-283696</span> ·
+                        <a id="email" class="text-primary" href="mailto:yutsungchiu@email.com">yutsungchiu@email.com</a>
                     </div>
-                    <p class="lead mb-5">Hi, I’m Anson. I am passionate about Computer Vision, 3D scanning, and reconstruction. With years of experience in this industry, I have honed my skills in transforming complex data into meaningful visual representations. My work reflects my commitment to innovation and excellence in these cutting-edge fields. I invite you to explore my portfolio and see how my expertise can bring ideas to life.</p>
+                    <p class="lead mb-5">
+                        <span id="intro">Hi, I’m Anson. I am passionate about Computer Vision, 3D scanning, and reconstruction. With years of experience in this industry, I have honed my skills in transforming complex data into meaningful visual representations. My work reflects my commitment to innovation and excellence in these cutting-edge fields. I invite you to explore my portfolio and see how my expertise can bring ideas to life.</span>
+                    </p>
+                    
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/yu-tsung-chiu/"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/BigTsung"><i class="fab fa-github"></i></a>
@@ -73,300 +75,193 @@
             <!-- Experience-->
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
+                    <h2 class="mb-5" data-lang="experience-title">Experience</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Senior Computer Vision Engineer</h3>
+                            <h3 class="mb-0" data-lang="experience-position-1">Senior Computer Vision Engineer</h3>
                             <div class="subheading mb-3">Aemass Inc.</div>
-                            <!-- <p>
-                                <strong>技術研究與項目管理</strong>
+                            <p>
+                                <strong data-lang="experience-role-title-1">Technical Research and Project Management</strong>
                                 <ul class="custom-list">
-                                    <li>主導開發公司自主的3D內容社交應用，結合ARFoundation(ARKit)與Unity的3D渲染效果，並使用C#進行開發，而該專案還結合了與AWS之間的溝通，包括帳號註冊、登入與登出功能，以及將3D檔案上傳和下載至手機端，最終的成果成功吸引多位投資人投入資金。</li>
-                                    <li>與美國團隊合作開發多攝像頭 3D 建模算法，參考 KinectFusion 和 DynamicFusion 技術，並使用 OpenCV 和 PyTorch 進行深度學習和建模。</li>
-                                    <li>成功將 3D 建模工作流程推向市場，並與台灣知名益智節目合作，實現了 3D 體積人物與實時場景之間的互動效果，展示了該技術在娛樂行業的應用。</li>
-                                    <li>與美國客戶合作開發了一個足球訓練檢測系統，負責足球檢測、多攝像頭校準和訓練應用開發。該系統利用 Open3D 和校準技術，成功部署於多個大型運動場地。</li>
-                                    <li>參與遠端物理治療專案，該專案透過遠端攝影設備讓使用者在家中進行物理治療。系統會擷取使用者的2D色彩及深度資訊影像，並利用3D重建技術還原人體靜態模型，結合深度學習模型分析使用者在治療後的體態是否得到改善，提供個性化的復健建議。我負責將技術團隊的研究成果和流程進行整合，並使用Docker將其納入CI/CD管線，成功與Server Team合作，在AWS上執行3D處理並將結果回傳至Client端。這樣的技術架構確保了系統的穩定性和可擴展性，實現了自動化部署和即時數據處理。</li>
+                                    <li data-lang="experience-detail-1-1">Led the development of the company’s proprietary 3D content social app, integrating ARFoundation (ARKit) with Unity’s 3D rendering capabilities, using C# for development. The project also involved communication with AWS, including user account registration, login and logout functionality, as well as uploading and downloading 3D files to and from mobile devices. The final outcome successfully attracted significant investments from multiple investors.</li>
+                                    <li data-lang="experience-detail-1-2">Collaborated with the U.S. team on multi-camera 3D modeling algorithms, referencing techniques like KinectFusion and DynamicFusion, utilizing tools such as OpenCV and Open3D for deep learning and modeling.</li>
+                                    <li data-lang="experience-detail-1-3">Successfully brought the 3D modeling workflow to market and collaborated with a well-known Taiwanese quiz show to achieve interactive effects between 3D volumetric characters and live scenes, demonstrating the application of the technology in the entertainment industry.</li>
+                                    <li data-lang="experience-detail-1-4">Worked with U.S. clients to develop a football training detection system, handling soccer detection, multi-camera calibration, and training app development. The system, utilizing Open3D and calibration techniques, was successfully deployed in large sports venues for multiple teams.</li>
+                                    <li data-lang="experience-detail-1-5">Participated in a remote physical therapy project that allows users to perform therapy sessions at home using remote camera setups. The system captures 2D color and depth information and reconstructs a 3D static model of the user’s body. It then uses deep learning models to analyze whether the user’s posture has improved after therapy, providing personalized rehabilitation suggestions. I was responsible for integrating the research and processes developed by the technical team, using Docker to incorporate them into the CI/CD pipeline, and successfully collaborating with the Server Team to deploy the 3D processing workflow on AWS, with the processed results returned to the client side. This architecture ensures system stability and scalability, enabling automated deployment and real-time data processing.</li>
                                 </ul>
                             </p>
-                            
                             <p>
-                                <strong>技術開發與工具構建</strong>
+                                <strong data-lang="experience-role-title-2">Technical Development and Tool Building</strong>
                                 <ul class="custom-list">
-                                    <li>生成大量 3D 體積視頻並在基於 Unity 的移動應用中展示，應用於體育、社交媒體和電視等行業。開發主要涉及 C++、Python 和 Unity。</li>
-                                    <li>與美術團隊合作建立 3D 建模工作流程，使用 Python 和 Blender API 在 Blender 中開發多個工具腳本，以增強細節處理並縮短生產時間。</li>
-                                    <li>開發了多款 3D 掃描應用，主要針對掃描人物。目標是讓用戶輕鬆使用手機捕捉和記錄物體。這些應用使用了 ARKit，並參考了多個 Apple 提供的掃描項目。開發專注於在移動設備上實現實時處理，快速生成可在 AR 或 3D 模式中預覽的閉合 3D 模型。</li>
+                                    <li data-lang="experience-detail-2-1">Generated large volumes of 3D volumetric videos and displayed them in Unity-based mobile applications, applied across industries like sports, social media, and television. The development primarily involved C++, Python, and Unity.</li>
+                                    <li data-lang="experience-detail-2-2">Collaborated with the art team to establish a 3D modeling workflow, developing multiple tool scripts in Blender using Python and the Blender API to enhance detail processing and reduce production time.</li>
+                                    <li data-lang="experience-detail-2-3">Developed several 3D scanning applications using Swift, primarily focused on scanning people. The goal was to allow users to easily capture and record objects with their mobile phones. The apps utilized ARKit and referenced several Apple-provided scanning projects. The development focused on enabling real-time processing on mobile devices, quickly generating watertight 3D models that could be previewed in either AR or 3D object modes.</li>
                                 </ul>
                             </p>
-                            
                             <p>
-                                <strong>團隊管理與協作</strong>
+                                <strong data-lang="experience-role-title-3">Team Management and Collaboration</strong>
                                 <ul class="custom-list">
-                                    <li>領導一個小團隊為客戶提供服務，並與合作夥伴工程團隊協作，確保項目順利執行，並使用 Git 進行版本控制和項目管理。</li>
-                                    <li>參與團隊擴展和招聘工作，最終管理了一支由 5 到 10 人（包括實習生）組成的工程團隊，負責技術培訓和項目協調。</li>
-                                </ul>
-                            </p> -->
-                            
-                            <!-- Simple Version -->
-                            <!-- Technical Research and Project Management
-                            •	Led the development of a 3D content social app, integrating ARFoundation (ARKit) with Unity and C#, along with AWS for account management and 3D file handling, which attracted significant investor interest.
-                            •	Collaborated with a U.S. team on multi-camera 3D modeling algorithms using techniques like KinectFusion and tools like OpenCV and Open3D.
-                            •	Launched a 3D modeling workflow and partnered with a well-known Taiwanese quiz show to integrate 3D volumetric characters with live scenes, showcasing technology in the entertainment sector.
-                            •	Developed a sports training detection system for U.S. clients, focusing on ball detection, multi-camera calibration, and deploying the system in large sports venues.
-                            •	Participated in a remote physical therapy project using 2D and depth camera data to reconstruct 3D body models for post-therapy posture analysis. Integrated research into a Docker-based CI/CD pipeline for deployment on AWS, enabling automated, scalable, and real-time processing. -->
-
-                            <p>
-                                <strong>Technical Research and Project Management</strong>
-                                <ul class="custom-list">
-                                    <li>Led the development of the company’s proprietary 3D content social app, integrating ARFoundation (ARKit) with Unity’s 3D rendering capabilities, using C# for development. The project also involved communication with AWS, including user account registration, login and logout functionality, as well as uploading and downloading 3D files to and from mobile devices. The final outcome successfully attracted significant investments from multiple investors.</li>
-                                    <li>Collaborated with the U.S. team on multi-camera 3D modeling algorithms, referencing techniques like KinectFusion and DynamicFusion, utilizing tools such as OpenCV and Open3D for deep learning and modeling.</li>
-                                    <li>Successfully brought the 3D modeling workflow to market and collaborated with a well-known Taiwanese quiz show to achieve interactive effects between 3D volumetric characters and live scenes, demonstrating the application of the technology in the entertainment industry.</li>
-                                    <li>Worked with U.S. clients to develop a football training detection system, handling soccer detection, multi-camera calibration, and training app development. The system, utilizing Open3D and calibration techniques, was successfully deployed in large sports venues for multiple teams.</li>
-                                    <!-- <li>Utilized Meshlab and Pymesh tools to optimize 3D model processing, focusing on improving the precision and quality of the models.</li> -->
-                                    <li>Participated in a remote physical therapy project that allows users to perform therapy sessions at home using remote camera setups. The system captures 2D color and depth information and reconstructs a 3D static model of the user’s body. It then uses deep learning models to analyze whether the user’s posture has improved after therapy, providing personalized rehabilitation suggestions. I was responsible for integrating the research and processes developed by the technical team, using Docker to incorporate them into the CI/CD pipeline, and successfully collaborating with the Server Team to deploy the 3D processing workflow on AWS, with the processed results returned to the client side. This architecture ensures system stability and scalability, enabling automated deployment and real-time data processing.</li>
-                                </ul>
-                            </p>
-                            
-
-                            <!-- Simple Version -->
-                            <!-- Technical Development and Tool Building
-
-                            •	Developed and showcased 3D volumetric videos in Unity-based mobile apps across sports, social media, and television, primarily using C++, Python, and Unity.
-                            •	Collaborated with the art team to streamline 3D modeling workflows, creating multiple Blender tool scripts with Python to enhance detail and reduce production time.
-                            •	Created several 3D scanning apps using Swift and ARKit, allowing users to capture and generate watertight 3D models in real-time on mobile devices, referencing Apple’s scanning projects. -->
-
-                            <p>
-                                <strong>Technical Development and Tool Building</strong>
-                                <ul class="custom-list">
-                                    <li>Generated large volumes of 3D volumetric videos and displayed them in Unity-based mobile applications, applied across industries like sports, social media, and television. The development primarily involved C++, Python, and Unity.</li>
-                                    <li>Collaborated with the art team to establish a 3D modeling workflow, developing multiple tool scripts in Blender using Python and the Blender API to enhance detail processing and reduce production time.</li>
-                                    <!-- <li>Developed automated build processes and introduced CI/CD pipelines using Docker and other automation tools to improve project efficiency.</li> -->
-                                    <li>Developed several 3D scanning applications using Swift, primarily focused on scanning people. The goal was to allow users to easily capture and record objects with their mobile phones. The apps utilized ARKit and referenced several Apple-provided scanning projects. The development focused on enabling real-time processing on mobile devices, quickly generating watertight 3D models that could be previewed in either AR or 3D object modes.</li>
-                                </ul>
-                            </p>
-                            
-                            <p>
-                                <strong>Team Management and Collaboration</strong>
-                                <ul class="custom-list">
-                                    <li>Led a small team in client servicing and collaborated with partner engineering teams to ensure smooth project execution, utilizing Git for version control and project management.</li>
-                                    <li>Participated in team expansion and recruitment efforts, eventually managing an engineering team of 5 to 10 people (including interns), responsible for technical training and project coordination.</li>
+                                    <li data-lang="experience-detail-3-1">Led a small team in client servicing and collaborated with partner engineering teams to ensure smooth project execution, utilizing Git for version control and project management.</li>
+                                    <li data-lang="experience-detail-3-2">Participated in team expansion and recruitment efforts, eventually managing an engineering team of 5 to 10 people (including interns), responsible for technical training and project coordination.</li>
                                 </ul>
                             </p>
                         </div>
                         <div class="col">
-                            <div class="flex-shrink-0"><span class="text-primary">December 2016 - July 2024</span></div>
-                            <!-- 公司 Logo -->
+                            <div class="flex-shrink-0"><span class="text-primary" data-lang="experience-duration-1">December 2016 - July 2024</span></div>
                             <div class="company-logo mb-2">
-                                <img src="assets/img/logo/logo_Aemass.jpg" alt="XPEC Logo" class="company-logo-img">
+                                <img src="assets/img/logo/logo_Aemass.jpg" alt="Aemass Logo" class="company-logo-img">
                             </div>
                         </div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            
-                            <h3 class="mb-0">Senior Game Programmer</h3>
-                            <div class="subheading mb-3"> XPEC Entertainment, Inc</div>
-                            
-                            <!-- <p>
-                                <strong>遊戲開發工程師 - FINAL FANTASY XV POCKET EDITION (C#, Unity)</strong>
-                                <ul class="custom-list">
-                                    <li>開發了供遊戲設計師使用的工具，讓他們可以輕鬆定義遊戲中的觸發區域和邏輯，例如設置陷阱區域或定義進入特定區域的條件，幫助設計師快速實現他們的創意。</li>
-                                    <li>基於 Wwise 構建了音頻管理系統，使音效設計師能夠高效地定義和配置環境音效、背景音樂 (BGM) 以及其他音頻元素的觸發條件，使設置過程更直觀、友好。</li>
-                                    <li>參與了各種功能的開發和測試，專注於性能優化，確保在多平台上順暢運行。</li>
-                                    <li>與遊戲設計師和藝術家密切合作，對齊開發流程、計劃進度，並確保按時交付項目。</li>
-                                </ul>
-                            </p> -->
-
+                            <h3 class="mb-0" data-lang="experience-position-2">Senior Game Programmer</h3>
+                            <div class="subheading mb-3" data-lang="experience-company-2">XPEC Entertainment, Inc</div>
                             <p>
                                 <strong>
-                                    <a href="https://apps.apple.com/tw/app/finalfantasy-xv-pocket-edition/id1152350815" target="_blank" style="text-decoration: underline; color: #007bff;">
+                                    <a href="https://apps.apple.com/tw/app/finalfantasy-xv-pocket-edition/id1152350815" target="_blank" style="text-decoration: underline; color: #007bff;" data-lang="experience-project-1-title">
                                         FINAL FANTASY XV POCKET EDITION
                                     </a> 
                                     - C#, Unity, Wwise
-                                </strong><br>
+                                </strong>
                                 <ul class="custom-list">
-                                    <li>Developed tools for game designers to easily define trigger zones and logic within the game, such as setting up trap areas or defining the conditions for entering specific zones, allowing designers to quickly implement their ideas.</li>
-                                    <li>Built an audio management system based on Wwise, enabling sound designers to efficiently define and configure triggers for ambient sounds, background music (BGM), and other audio elements, making the setup process more intuitive and user-friendly.</li>
-                                    <li>Participated in the development and testing of various features, focusing on performance optimization to ensure smooth operation across multiple platforms.</li>
-                                    <li>Collaborated closely with game designers and artists to align development processes, plan schedules, and ensure timely project delivery.</li>
+                                    <li data-lang="experience-project-1-detail-1">Developed tools for game designers to easily define trigger zones and logic within the game, such as setting up trap areas or defining the conditions for entering specific zones, allowing designers to quickly implement their ideas.</li>
+                                    <li data-lang="experience-project-1-detail-2">Built an audio management system based on Wwise, enabling sound designers to efficiently define and configure triggers for ambient sounds, background music (BGM), and other audio elements, making the setup process more intuitive and user-friendly.</li>
+                                    <li data-lang="experience-project-1-detail-3">Participated in the development and testing of various features, focusing on performance optimization to ensure smooth operation across multiple platforms.</li>
+                                    <li data-lang="experience-project-1-detail-4">Collaborated closely with game designers and artists to align development processes, plan schedules, and ensure timely project delivery.</li>
                                 </ul>
                             </p>
-                            <!-- 圖片部分 -->
+                            
                             <img src="assets/img/experience/experience_FF15Pocjet.webp" alt="FF15 Pocket Screenshot" class="experience-image">
                             <img src="assets/img/experience/experience_FF15Pocjet_2.webp" alt="FF15 Pocket Screenshot" class="experience-image">
+                            
                             <br>
-                            <!-- <p>
-                                <strong>Unity 支援團隊 (R&D Team) - C#, Unity</strong>
-                                <ul class="custom-list">
-                                    <li>為 3D 動作遊戲團隊進行了敵人 AI 和行為系統的研究，重點關注如跟隨、巡邏和防守等機制的開發。</li>
-                                    <li>研究並開發了旨在縮短開發時間並提高遊戲整體質量的工具。</li>
-                                    <li>研究並開發了一個適用於所有使用 Unity 構建的遊戲項目的統一音頻系統，確保不同團隊間的一致性和效率。</li>
-                                    <li>快速開發了多個動作和 RPG 遊戲的原型，展示了核心遊戲機制和概念，並在短時間內完成。</li>
-                                </ul>
-                            </p> -->
                             <br>
+
                             <p>
-                                <strong>Unity Support Team (R&D Team) - C#, Unity</strong>
+                                <strong data-lang="experience-role-title-4">Unity Support Team (R&D Team) - C#, Unity</strong>
                                 <ul class="custom-list">
-                                    <li>Conducted research into enemy AI and behavior systems for the 3D action game team, focusing on features such as following, patrolling, and guarding mechanics.</li>
-                                    <li>Researched and developed tools aimed at reducing development time and improving overall game quality.</li>
-                                    <li>Investigated and developed a unified audio system for all game projects built with Unity, ensuring consistency and efficiency across different teams.</li>
-                                    <li>Rapidly developed multiple prototypes for action and RPG games, demonstrating key gameplay mechanics and concepts within short timeframes.</li>
+                                    <li data-lang="experience-project-2-detail-1">Conducted research into enemy AI and behavior systems for the 3D action game team, focusing on features such as following, patrolling, and guarding mechanics.</li>
+                                    <li data-lang="experience-project-2-detail-2">Researched and developed tools aimed at reducing development time and improving overall game quality.</li>
+                                    <li data-lang="experience-project-2-detail-3">Investigated and developed a unified audio system for all game projects built with Unity, ensuring consistency and efficiency across different teams.</li>
+                                    <li data-lang="experience-project-2-detail-4">Rapidly developed multiple prototypes for action and RPG games, demonstrating key gameplay mechanics and concepts within short timeframes.</li>
                                 </ul>
                             </p>
                         </div>
                         <div class="col">
-                            <div class="flex-shrink-0"><span class="text-primary">April 2015 - October 2016</span></div>
-                            <!-- 公司 Logo -->
+                            <div class="flex-shrink-0"><span class="text-primary" data-lang="experience-duration-2">April 2015 - October 2016</span></div>
                             <div class="company-logo mb-2">
                                 <img src="assets/img/logo/logo_XPEC.png" alt="XPEC Logo" class="company-logo-img">
                             </div>
                         </div>
                     </div>
-
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Game Programmer</h3>
-                            <div class="subheading mb-3">XPEC Entertainment, Inc</div>
+                            <h3 class="mb-0" data-lang="experience-position-3">Game Programmer</h3>
+                            <div class="subheading mb-3" data-lang="experience-company-3">XPEC Entertainment, Inc</div>
                             <p>
                                 <strong>
-                                    <a href="https://www.youtube.com/watch?v=mgrJRKwEnsc" target="_blank" style="text-decoration: underline; color: #007bff;">
+                                    <a href="https://www.youtube.com/watch?v=mgrJRKwEnsc" target="_blank" style="text-decoration: underline; color: #007bff;" data-lang="experience-project-3-title">
                                         DTL(Web Game)
                                     </a> 
                                     - ActionScript, Adobe Flash
                                 </strong>
                                 <ul class="custom-list">
-                                    <li>Designed the UI/UX for the game, focusing on creating an intuitive and engaging user experience.</li>
-                                    <li>Developed the core gameplay mechanics, implementing features that align with the game’s design and objectives.</li>
-                                    <li>Successfully published the game, overseeing the entire development process from concept to release.</li>
+                                    <li data-lang="experience-project-3-detail-1">Designed the UI/UX for the game, focusing on creating an intuitive and engaging user experience.</li>
+                                    <li data-lang="experience-project-3-detail-2">Developed the core gameplay mechanics, implementing features that align with the game’s design and objectives.</li>
+                                    <li data-lang="experience-project-3-detail-3">Successfully published the game, overseeing the entire development process from concept to release.</li>
                                 </ul>
                             </p>
-                            <!-- 圖片部分 -->
                             <img src="assets/img/experience/Experience_DTL.png" alt="DTL Game Screenshot" class="experience-image">
                             <img src="assets/img/experience/Experience_DTL_2.png" alt="DTL Game Screenshot" class="experience-image">
                         </div>
                         <div class="col">
-                            <div class="flex-shrink-0"><span class="text-primary">October 2013 - March 2015</span></div>
-                            <!-- 公司 Logo -->
+                            <div class="flex-shrink-0"><span class="text-primary" data-lang="experience-duration-3">October 2013 - March 2015</span></div>
                             <div class="company-logo mb-2">
                                 <img src="assets/img/logo/logo_XPEC.png" alt="XPEC Logo" class="company-logo-img">
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
-       
+
             <hr class="m-0" />
             <!-- Skills-->
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                      <ul class="list-inline dev-icons">
+                    <h2 class="mb-5" data-lang="skills-title">Skills</h2>
+                    <div class="subheading mb-3" data-lang="skills-programming">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
                         <li class="list-inline-item"><i class="fab fa-python" title="Python"></i></li>
                         <li class="list-inline-item"><i class="" title="Swift">Swift</i></li>
                         <li class="list-inline-item"><i class="" title="C++">C++</i></li>
                         <li class="list-inline-item"><i class="" title="C#">C#</i></li>
-                        <li class="list-inline-item"><i class="fab fa-unity" title="unity"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-docker" title="docker"></i></li>
-                      </ul>
-                    <div class="subheading mb-3">Workflow</div>
-                      <ul class="fa-ul mb-0">
+                        <li class="list-inline-item"><i class="fab fa-unity" title="Unity"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-docker" title="Docker"></i></li>
+                    </ul>
+                    
+                    <div class="subheading mb-3" data-lang="skills-workflow">Workflow</div>
+                    <ul class="fa-ul mb-0">
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
+                            <span data-lang="workflow-mobile">Mobile-First, Responsive Design</span>
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Platform Testing & Debugging
+                            <span data-lang="workflow-testing">Cross Platform Testing & Debugging</span>
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
+                            <span data-lang="workflow-teams">Cross Functional Teams</span>
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Version Control with Git & GitHub
+                            <span data-lang="workflow-version">Version Control with Git & GitHub</span>
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Performance Optimization
+                            <span data-lang="workflow-optimization">Performance Optimization</span>
                         </li>
-                      </ul><br>
+                    </ul><br>
+                    
                     <div class="libraries-container">
                         <div class="library-section">
-                            <div class="subheading mb-3">Libraries (CV/ML/AI)</div>
+                            <div class="subheading mb-3" data-lang="skills-libraries-cv">Libraries (CV/ML/AI)</div>
                             <ul class="fa-ul mb-0">
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-caret-right"></i></span>
-                                    OpenCV
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-caret-right"></i></span>
-                                    dlib
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-caret-right"></i></span>
-                                    PyTorch
-                                </li>
+                                <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>OpenCV</li>
+                                <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>dlib</li>
+                                <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>PyTorch</li>
                             </ul>
                         </div>
-                    
+            
                         <div class="library-section">
-                            <div class="subheading mb-3">Libraries (3D)</div>
+                            <div class="subheading mb-3" data-lang="skills-libraries-3d">Libraries (3D)</div>
                             <ul class="fa-ul mb-0">
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-caret-right"></i></span>
-                                    PCL
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-caret-right"></i></span>
-                                    Open3D
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-caret-right"></i></span>
-                                    Blender + Python
-                                </li>
+                                <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>PCL</li>
+                                <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>Open3D</li>
+                                <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>Blender + Python</li>
                             </ul>
                         </div>
-                    
+            
                         <div class="library-section">
-                            <div class="subheading mb-3">Libraries (AR/VR)</div>
+                            <div class="subheading mb-3" data-lang="skills-libraries-ar">Libraries (AR/VR)</div>
                             <ul class="fa-ul mb-0">
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-caret-right"></i></span>
-                                    Unity + AR Foundation
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-caret-right"></i></span>
-                                    ARKit
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-caret-right"></i></span>
-                                    Vuforia
-                                </li>
+                                <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>Unity + AR Foundation</li>
+                                <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>ARKit</li>
+                                <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>Vuforia</li>
                             </ul>
                         </div>
                     </div><br>
+            
                     <div class="libraries-container">
                         <div class="library-section">
-                            <div class="subheading mb-3">RGBD Sensors</div>
+                            <div class="subheading mb-3" data-lang="skills-sensors">RGBD Sensors</div>
                             <ul class="fa-ul mb-0">
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-caret-right"></i></span>
-                                    Microsoft Azure Kinect
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-caret-right"></i></span>
-                                    Intel Real Sense 
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-caret-right"></i></span>
-                                    Microsoft Kinect v2 
-                                </li>
+                                <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>Microsoft Azure Kinect</li>
+                                <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>Intel Real Sense</li>
+                                <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>Microsoft Kinect v2</li>
                             </ul>
                         </div>
-                
                     </div>
                 </div>
             </section>
@@ -374,49 +269,14 @@
             <hr class="m-0" />
             <section class="resume-section" id="projects">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Projects</h2>
+                    <h2 class="mb-5" data-lang="projects-title">Projects</h2>
             
                     <!-- Industuy Project -->
                     <div class="project-item-aemass mb-5">
                         <h3 class="project-category-title">
-                            <span class="project-badge badge-aemass">Industry Project</span>
+                            <span class="project-badge badge-aemass" data-lang="industry-project">Industry Project</span>
                         </h3>
                         <div class="row">
-
-                            <!-- /* TEMPLATE */
-                            <div class="col-md-6">
-                                <img class="img-fluid project-image" src="assets/img/projects/" alt="Project 1 Image">
-                            </div>
-                            <div class="col-md-6">
-                                <h3 class="project-title">Template</h3>
-                                <div class="project-tags">
-                                    <span class="project-tag">A</span>
-                                    <span class="project-tag">B</span>
-                                    <span class="project-tag">C</span>
-                                </div>
-                                /* <p class="project-description">中文</p> */
-                                <p class="project-description">English</p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalTEMPLATE">Watch Video</a>
-                                <a href="https://ansonxxxxxxx.com" class="btn btn-primary" target="_blank">Read Website</a>
-                            </div>
-                             /* Flow Tracking Modal */
-                             <div class="modal fade" id="videoModalTEMPLATE" tabindex="-1" aria-labelledby="videoModalLabelTEMPLATE" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="videoModalLabelTEMPLATE">Realtime Flow Tracking Project Video</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="ratio ratio-16x9">
-                                                <iframe src="https://www.youtube.com/embed/" title="YouTube video" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <hr class="project-divider"> -->
 
                             <!-- 3DCapturing app -->
                             <div class="col-md-6">
@@ -426,14 +286,14 @@
                                 <img class="img-fluid small_20-project-image" src="assets/img/projects/Project_3DCapturing_app_4.png" alt="3DCapturing app Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">3DCapturing app</h3>
+                                <h3 class="project-title" data-lang="project-3dcapturing-title">3DCapturing app</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">swift</span>
                                     <span class="project-tag">xCode</span>
                                 </div>
                                 <!-- <p class="project-description">這是一個包含3D捕捉和3D重建功能的App，該App的開發初衷是為了吸引潛在客戶。整個App的UI/UX設計全權由我負責，並且我也負責了開發流程。用戶在開始使用App時，會先經歷登入或註冊的步驟，並填寫必要的使用者資訊。隨後，進入3D捕捉階段，該階段會捕捉用戶的幾個不同面向的照片，這些照片隨後會被用來還原成3D物件並進行分析。App還提供了Review 3D物件的功能，並設有Onboarding頁面來指導用戶如何使用App。除此之外，該App還具備一項功能，允許用戶只需環繞想要掃描的真實物體，便可在手機端運算出3D重建的結果。</p> -->
-                                <p class="project-description">This project is a 3D capturing app that also includes 3D reconstruction features, initially developed to attract potential customers. I was fully responsible for the UI/UX design, as well as the development of the entire app. Users begin by registering or logging in and providing necessary personal information. After this, they proceed to the 3D capturing stage, where the app captures multiple angles of the user, which are then used to reconstruct a 3D object for analysis. The app also includes features for reviewing the generated 3D object and provides an onboarding page to guide users through the app. Additionally, the app offers a function that allows users to capture real-world objects by simply circling them, enabling 3D reconstruction directly on the mobile device.</p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal3DCapturingApp">Watch Video</a>
+                                <p class="project-description" data-lang="project-3dcapturing-description">This project is a 3D capturing app that also includes 3D reconstruction features, initially developed to attract potential customers. I was fully responsible for the UI/UX design, as well as the development of the entire app. Users begin by registering or logging in and providing necessary personal information. After this, they proceed to the 3D capturing stage, where the app captures multiple angles of the user, which are then used to reconstruct a 3D object for analysis. The app also includes features for reviewing the generated 3D object and provides an onboarding page to guide users through the app. Additionally, the app offers a function that allows users to capture real-world objects by simply circling them, enabling 3D reconstruction directly on the mobile device.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal3DCapturingApp" data-lang="watch-video">Watch Video</a>
                             </div>
                             <!-- 3DCapturing app Modal -->
                             <div class="modal fade" id="videoModal3DCapturingApp" tabindex="-1" aria-labelledby="videoModalLabel3DCapturingApp" aria-hidden="true">
@@ -461,15 +321,15 @@
                                 <img class="img-fluid small-project-image" src="assets/img/projects/Project_3DShareApp_3.png" alt="3DShare app Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">3DShare app</h3>
+                                <h3 class="project-title" data-lang="project-3dshare-title">3DShare app</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">C#</span>
                                     <span class="project-tag">Unity</span>
                                     <span class="project-tag">AWS Mobile SDK</span>
                                 </div>
                                 <!-- <p class="project-description">這個專案是我在前公司全權負責開發的一款自主App。由於該App需要展示大量的3D內容物、特效及即時運算，因此選擇了使用Unity進行開發。這款App除了包含大量的UI、UX設計外，還集成了一些社交媒體和社交功能，如分享3D內容或截圖。此外，該App還具備即時從Server上下載最新3D全息圖並直接顯示的能力，提供了豐富的互動體驗。</p> -->
-                                <p class="project-description">This project was an app that I was fully responsible for developing at my previous company. Due to the need to display extensive 3D content, effects, and real-time computations, Unity was chosen as the development platform. The app features significant UI and UX design elements, along with various social media and social functionalities, such as sharing 3D content or screenshots. Additionally, the app includes the capability to download the latest 3D holograms from the server in real-time and display them directly within the app, offering a rich interactive experience.</p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal3DShareApp">Watch Video</a>
+                                <p class="project-description" data-lang="project-3dshare-description">This project was an app that I was fully responsible for developing at my previous company. Due to the need to display extensive 3D content, effects, and real-time computations, Unity was chosen as the development platform. The app features significant UI and UX design elements, along with various social media and social functionalities, such as sharing 3D content or screenshots. Additionally, the app includes the capability to download the latest 3D holograms from the server in real-time and display them directly within the app, offering a rich interactive experience.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal3DShareApp" data-lang="watch-video">Watch Video</a>
                             </div>
                              <!-- 3DShareApp Modal  -->
                              <div class="modal fade" id="videoModal3DShareApp" tabindex="-1" aria-labelledby="videoModalLabel3DShareApp" aria-hidden="true">
@@ -495,15 +355,15 @@
                                 <img class="img-fluid project-image" src="assets/img/projects/Project_3DShowcases.jpg" alt="3D showcases Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">3D showcases</h3>
+                                <h3 class="project-title" data-lang="project-3dshowcases-title">3D showcases</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">C#</span>
                                     <span class="project-tag">Unity</span>
                                     <span class="project-tag">PointCloud</span>
                                 </div>
                                 <!-- <p class="project-description">這些應用專案旨在與潛在客戶合作，利用3D展示方式取代傳統的2D顯示方法，涵蓋了運動、能源及智慧場域等多個產業。相比於2D展示，3D技術能更直觀地呈現複雜的數據和資訊，提升了資料的視覺化效果。此外，這些應用還將3D模型與真實場域的地形和統計數據進行結合和連動，使得展示更加全面和有說服力。我將這些專案成果整合在一起進行展示，展示過程中使用了多種技術，包括UI/UX設計、人機互動、光影切換、點雲渲染，以及人流偵測與統計的模擬系統。</p> -->
-                                <p class="project-description">These applications were developed with the aim of collaborating with potential clients, utilizing 3D visualization to replace traditional 2D display methods. The projects span industries such as sports, energy, and smart environments. Compared to 2D, 3D technology offers a more visual and comprehensive presentation of data and information. Additionally, these applications integrate 3D models with real-world terrain and statistical data, creating a more dynamic and interconnected visualization experience. I consolidated the results of these projects into a single showcase, utilizing various technologies such as UI/UX design, human-computer interaction, light and shadow switching, point cloud rendering, and a simulation system for crowd detection and statistics.</p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal3DShowcases">Watch Video</a>
+                                <p class="project-description" data-lang="project-3dshowcases-description">These applications were developed with the aim of collaborating with potential clients, utilizing 3D visualization to replace traditional 2D display methods. The projects span industries such as sports, energy, and smart environments. Compared to 2D, 3D technology offers a more visual and comprehensive presentation of data and information. Additionally, these applications integrate 3D models with real-world terrain and statistical data, creating a more dynamic and interconnected visualization experience. I consolidated the results of these projects into a single showcase, utilizing various technologies such as UI/UX design, human-computer interaction, light and shadow switching, point cloud rendering, and a simulation system for crowd detection and statistics.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal3DShowcases" data-lang="watch-video">Watch Video</a>
                             </div>
                              <!-- 3DShowcasesg Modal -->
                              <div class="modal fade" id="videoModal3DShowcases" tabindex="-1" aria-labelledby="videoModalLabel3DShowcases" aria-hidden="true">
@@ -529,7 +389,7 @@
                                 <img class="img-fluid project-image" src="assets/img/projects/Project_VisionFusion.jpg" alt="VisionFusion">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">VisionFusion</h3>
+                                <h3 class="project-title" data-lang="project-visionfusion-title">VisionFusion</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">C++</span>
                                     <span class="project-tag">python</span>
@@ -539,8 +399,8 @@
                                     <span class="project-tag">Openpose</span>
                                 </div>
                                 <!-- <p class="project-description">中文</p> -->
-                                <p class="project-description">This project showcases my work in areas such as object detection, posture recognition, object classification, and the application of these technologies in services such as physical therapy and posture recognition. In these projects, I utilized a variety of tools and libraries, including Microsoft’s Azure Kinect Body Tracking SDK, OpenPose, MediaPipe, and extensive use of OpenCV libraries. For object detection, I employed YOLO (You Only Look Once) technology. These projects highlight the practical applications of these advanced technologies in real-world scenarios.</p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalVisionFusion">Watch Video</a>
+                                <p class="project-description" data-lang="project-visionfusion-description">This project showcases my work in areas such as object detection, posture recognition, object classification, and the application of these technologies in services such as physical therapy and posture recognition. In these projects, I utilized a variety of tools and libraries, including Microsoft’s Azure Kinect Body Tracking SDK, OpenPose, MediaPipe, and extensive use of OpenCV libraries. For object detection, I employed YOLO (You Only Look Once) technology. These projects highlight the practical applications of these advanced technologies in real-world scenarios.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalVisionFusion" data-lang="watch-video">Watch Video</a>
                             </div>
                              <!-- VisionFusion -->
                              <div class="modal fade" id="videoModalVisionFusion" tabindex="-1" aria-labelledby="videoModalLabelVisionFusion" aria-hidden="true">
@@ -566,7 +426,7 @@
                                 <img class="img-fluid project-image" src="assets/img/projects/Project_AR_Collective.jpg" alt="Project 1 Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">AR Collective</h3>
+                                <h3 class="project-title" data-lang="project-arcollective-title">AR Collective</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">C#</span>
                                     <span class="project-tag">Unity</span>
@@ -576,8 +436,8 @@
                                     <span class="project-tag">Streaming</span>
                                 </div>
                                 <!-- <p class="project-description">這個專案旨在將我近年來執行過的多個AR Demo影片整合成一個綜合展示，展示了AR技術在不同時期的進化與應用。在這些Demo中，物件辨識技術經歷了從傳統的Marker辨識，到圖片辨識，再到3D物件的識別，直至如今最新的使用ARKit進行空間定位。大部分開發工作都是在Unity平台上完成的，並結合了AR Foundation、ARKit和Vuforia等技術。通過這個整合的影片展示，可以系統地呈現這些AR技術如何被應用在不同場景中，突顯了技術的多樣性及其發展歷程。</p> -->
-                                <p class="project-description">This project involved compiling and integrating videos of various AR demos I have worked on over the years into a comprehensive showcase, highlighting the evolution and application of AR technology. In these demos, object recognition technology progressed from traditional marker recognition, to image recognition, to 3D object recognition, and now the latest method using ARKit for spatial positioning. Most of the development was carried out on the Unity platform, utilizing AR Foundation, ARKit, and Vuforia. By consolidating these demo videos, I can systematically showcase how these AR technologies have been applied across different scenarios, emphasizing the diversity of the technology and its developmental journey.</p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalARCollective">Watch Video</a>
+                                <p class="project-description" data-lang="project-arcollective-description">This project involved compiling and integrating videos of various AR demos I have worked on over the years into a comprehensive showcase, highlighting the evolution and application of AR technology. In these demos, object recognition technology progressed from traditional marker recognition, to image recognition, to 3D object recognition, and now the latest method using ARKit for spatial positioning. Most of the development was carried out on the Unity platform, utilizing AR Foundation, ARKit, and Vuforia. By consolidating these demo videos, I can systematically showcase how these AR technologies have been applied across different scenarios, emphasizing the diversity of the technology and its developmental journey.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalARCollective" data-lang="watch-video">Watch Video</a>
                             </div>
                              <!-- Flow Tracking Modal -->
                              <div class="modal fade" id="videoModalARCollective" tabindex="-1" aria-labelledby="videoModalLabelARCollective" aria-hidden="true">
@@ -602,23 +462,23 @@
                                 <img class="img-fluid project-image" src="assets/img/projects/Project_MotionViz.gif" alt="Project 1 Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">MotionViz</h3>
+                                <h3 class="project-title" data-lang="project-motionviz-title">MotionViz</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">C#</span>
                                     <span class="project-tag">Unity</span>
                                     <span class="project-tag">Viz</span>
                                 </div>
                                 <!-- <p class="project-description">這個專案在Unity上開發了一套可視化的流程和工具，專為展示動作捕捉及姿勢分析技術成果而設計。該工具能夠在3D全息影像中直觀地顯示每個標記點的詳細資訊，包括其座標和速度。這些標記點用來表示運動過程中的關鍵節點，通過這些數據，可以對動作進行深入的分析和評估。該工具不僅能夠精確地呈現標記點的動態變化，還能幫助使用者更好地理解複雜的運動和姿態。</p> -->
-                                <p class="project-description">This project involved developing a visualization pipeline and toolset in Unity, specifically designed to showcase motion capture and posture analysis techniques. The tool provides an intuitive way to display detailed information for each marked point within 3D holograms, including coordinates and velocity. These marked points represent key nodes in the motion, allowing for in-depth analysis and evaluation of the movements. The tool not only accurately presents the dynamic changes of these points but also helps users better understand complex motions and postures.</p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalMotionViz">Watch Video</a>
+                                <p class="project-description" data-lang="project-motionviz-description">This project involved developing a visualization pipeline and toolset in Unity, specifically designed to showcase motion capture and posture analysis techniques. The tool provides an intuitive way to display detailed information for each marked point within 3D holograms, including coordinates and velocity. These marked points represent key nodes in the motion, allowing for in-depth analysis and evaluation of the movements. The tool not only accurately presents the dynamic changes of these points but also helps users better understand complex motions and postures.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalMotionViz" data-lang="watch-video">Watch Video</a>
                                 <!-- <a href="https://ansonxxxxxxx.com" class="btn btn-primary" target="_blank">Read Website</a> -->
                             </div>
                              <!-- MotionViz Modal -->
-                             <div class="modal fade" id="videoModalMotionViz"" tabindex="-1" aria-labelledby="videoModalLabeMotionViz"" aria-hidden="true">
+                             <div class="modal fade" id="videoModalMotionViz" tabindex="-1" aria-labelledby="videoModalLabeMotionViz" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="videoModalLabelMotionViz"">MotionViz Project Video</h5>
+                                            <h5 class="modal-title" id="videoModalLabelMotionViz">MotionViz Project Video</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -637,21 +497,21 @@
                                 <img class="img-fluid project-image" src="assets/img/projects/Project_FutureCity_AR.jpg" alt="Project 1 Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">FutureCity AR</h3>
+                                <h3 class="project-title" data-lang="project-futurecity-title">FutureCity AR</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">C#</span>
                                     <span class="project-tag">Unity</span>
                                 </div>
                                 <!-- <p class="project-description">這是一個運行於Android平台的AR 3D物件追蹤應用，該專案使用Unity進行開發。專案設計中，一隻手機作為server端負責控制3D內容，並將控制結果同步至client端的手機上。控制範圍包括顯示數位內容及鎖定互動物件。此外，虛擬3D內容的顯示位置是通過追蹤現實世界中的3D物件來確定的，實現了虛實結合的效果。</p> -->
-                                <p class="project-description">This project is an AR 3D object tracking app running on Android, developed using Unity. In the project, one mobile device serves as the server side to control the 3D content and synchronizes the control results to the client-side mobile device. The controls include displaying digital content and locking onto interactive objects. The virtual 3D content is positioned by tracking real-world 3D objects, enabling a seamless integration between the virtual and real environments.</p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalFutureCityAR">Watch Video</a>
+                                <p class="project-description" data-lang="project-futurecity-description">This project is an AR 3D object tracking app running on Android, developed using Unity. In the project, one mobile device serves as the server side to control the 3D content and synchronizes the control results to the client-side mobile device. The controls include displaying digital content and locking onto interactive objects. The virtual 3D content is positioned by tracking real-world 3D objects, enabling a seamless integration between the virtual and real environments.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalFutureCityAR" data-lang="watch-video">Watch Video</a>
                             </div>
                              <!-- FutureCity AR Modal -->
-                             <div class="modal fade" id="videoModalFutureCityAR"" tabindex="-1" aria-labelledby="videoModalLabelFutureCityAR"" aria-hidden="true">
+                             <div class="modal fade" id="videoModalFutureCityAR" tabindex="-1" aria-labelledby="videoModalLabelFutureCityAR" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="videoModalLabelFutureCityAR"">FutureCity AR Project Video</h5>
+                                            <h5 class="modal-title" id="videoModalLabelFutureCityAR">FutureCity AR Project Video</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -670,16 +530,16 @@
                                 <img class="img-fluid project-image" src="assets/img/projects/Project_flow_tracking.gif" alt="Project 1 Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">Realtime Flow Tracking</h3>
+                                <h3 class="project-title" data-lang="project-flowtracking-title">Realtime Flow Tracking</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">C#</span>
                                     <span class="project-tag">Unity</span>
                                     <span class="project-tag">AWS Mobile SDK</span>
                                 </div>
                                 <!-- <p class="project-description">這個專案主要利用LiDAR技術進行即時人流監測與追蹤。LiDAR裝置被安裝在街道入口，透過偵測並追蹤人流來控制進出。該系統使用Unity開發了一個直觀的介面，讓使用者能夠快速查看人流基數和3D人流變化情況，同時數據會即時傳送至AWS進行統計分析，進而實現人流控制。在疫情期間，該系統尤其有助於管理進出人數，並在必要時發出警示以進行人流疏導。該專案還獲得了Global ICT Excellence Award的殊榮。</p> -->
-                                <p class="project-description">This project focuses on real-time people tracking and crowd monitoring using LiDAR technology. LiDAR sensors are installed at key street entrances to detect and track pedestrian flow for crowd control. The system is integrated with a Unity-based interface, providing a user-friendly way to monitor crowd density and visualize 3D crowd movement. The data is continuously sent to AWS for statistical analysis to help manage crowd flow effectively. During the pandemic, this system proved particularly useful for controlling the number of people entering and exiting the area and issuing alerts when necessary. The project also received the Global ICT Excellence Award.</p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalFlowTracking">Watch Video</a>
-                                <a href="https://tw.news.yahoo.com/%E7%A0%94%E7%A9%B6%E5%93%A1%E7%AA%81%E7%99%BC%E5%A5%87%E6%83%B3-%E7%94%A8-%E9%80%99%E6%8B%9B-%E9%98%B2%E7%96%AB%E5%8A%A9%E5%A4%9C%E5%B8%82%E4%BA%BA%E6%BD%AE%E5%9B%9E%E6%B5%81-%E9%82%84%E4%BB%A3%E8%A1%A8%E5%8F%B0%E7%81%A3%E5%A5%AA%E4%B8%8B%E5%9C%8B%E9%9A%9B%E5%A4%A7%E7%8D%8E%E5%86%A0%E8%BB%8D-023800215.html" class="btn btn-primary" target="_blank">Read News</a>
+                                <p class="project-description" data-lang="project-flowtracking-description">This project focuses on real-time people tracking and crowd monitoring using LiDAR technology. LiDAR sensors are installed at key street entrances to detect and track pedestrian flow for crowd control. The system is integrated with a Unity-based interface, providing a user-friendly way to monitor crowd density and visualize 3D crowd movement. The data is continuously sent to AWS for statistical analysis to help manage crowd flow effectively. During the pandemic, this system proved particularly useful for controlling the number of people entering and exiting the area and issuing alerts when necessary. The project also received the Global ICT Excellence Award.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalFlowTracking" data-lang="watch-video">Watch Video</a>
+                                <a href="https://tw.news.yahoo.com/%E7%A0%94%E7%A9%B6%E5%93%A1%E7%AA%81%E7%99%BC%E5%A5%87%E6%83%B3-%E7%94%A8-%E9%80%99%E6%8B%9B-%E9%98%B2%E7%96%AB%E5%8A%A9%E5%A4%9C%E5%B8%82%E4%BA%BA%E6%BD%AE%E5%9B%9E%E6%B5%81-%E9%82%84%E4%BB%A3%E8%A1%A8%E5%8F%B0%E7%81%A3%E5%A5%AA%E4%B8%8B%E5%9C%8B%E9%9A%9B%E5%A4%A7%E7%8D%8E%E5%86%A0%E8%BB%8D-023800215.html" class="btn btn-primary" target="_blank" data-lang="read-news">Read News</a>
                             </div>
                             <!-- FutureCity AR Modal -->
                             <div class="modal fade" id="videoModalFlowTracking" tabindex="-1" aria-labelledby="videoModalLabelFlowTracking" aria-hidden="true">
@@ -697,29 +557,12 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- Flow Tracking Modal -->
-                            <!-- <div class="modal fade" id="videoModalFlowTracking"" tabindex="-1" aria-labelledby="videoModalLabelFlowTracking"" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="videoModalLabelFlowTracking"">Realtime Flow Tracking Project Video</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="ratio ratio-16x9">
-                                                <iframe src="https://www.youtube.com/embed/m3LKOHJyJo0" title="YouTube video" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
             
                     <div class="project-item-weekend-project mb-5">
                         <h3 class="project-category-title">
-                            <span class="project-badge badge-weekend-project">Weekend Project</span>
+                            <span class="project-badge badge-weekend-project" data-lang="weekend-project">Weekend Project</span>
                         </h3>
                        <!-- finance_app -->
                         <div class="row">
@@ -727,14 +570,14 @@
                                 <img class="img-fluid project-image" src="assets/img/projects/Demo_finance_app.gif" alt="New Weekend Project Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">Finance app(tentative)</h3>
+                                <h3 class="project-title" data-lang="project-financeapp-title">Finance app(tentative)</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">Python</span>
                                     <span class="project-tag">twstock</span>
                                 </div>
                                 <!-- <p class="project-description">我正在進行一個專案，目標是讓用戶只需簡單輸入個股代號，即可查詢相關股票資訊，包括即時價格、成交價、漲跌幅、開盤價和KD值。此外，還計劃加入自訂演算法來篩選出理想的股票。目前我使用Python在macOS上進行開發。</p> -->
-                                <p class="project-description">I’m currently working on a project that allows users to simply input a stock ticker symbol and retrieve relevant stock information, including real-time prices, transaction volumes, price changes, opening prices, and KD values. The goal is to eventually integrate custom algorithms to filter out preferred stocks. The project is being developed in Python and runs on macOS.</p>
-                                <a href="https://github.com/BigTsung/finance_app?tab=readme-ov-file" class="btn btn-primary" target="_blank">View Project on GitHub</a>
+                                <p class="project-description" data-lang="project-financeapp-description">I’m currently working on a project that allows users to simply input a stock ticker symbol and retrieve relevant stock information, including real-time prices, transaction volumes, price changes, opening prices, and KD values. The goal is to eventually integrate custom algorithms to filter out preferred stocks. The project is being developed in Python and runs on macOS.</p>
+                                <a href="https://github.com/BigTsung/finance_app?tab=readme-ov-file" class="btn btn-primary" target="_blank" data-lang="view-project-on-GitHub">View Project on GitHub</a>
                             </div>
                         </div>
                         <hr class="project-divider">
@@ -747,15 +590,15 @@
                                 <img class="img-fluid small-project-image" src="assets/img/projects/Demo_toy_ani.gif" alt="New Weekend Project Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">Blinky Box</h3>
+                                <h3 class="project-title" data-lang="project-blinkybox-title">Blinky Box</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">Toy</span>
                                     <span class="project-tag">DIY</span>
                                     <span class="project-tag">Electricity</span>
                                 </div>
                                 <!-- <p class="project-description">因為我的孩子喜歡玩電燈開關，我特別為他設計了一個手持式小玩具，讓他可以通過切換玩具上的不同類型開關，個別控制不同燈泡的亮起，滿足他的好奇心與探索欲。</p> -->
-                                <p class="project-description">Because my child loves playing with light switches, I created a handheld toy that allows them to toggle different types of switches to individually control various light bulbs, satisfying their curiosity and desire to explore.</p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalBlinkyBox">Watch Video</a>
+                                <p class="project-description" data-lang="project-blinkybox-description">Because my child loves playing with light switches, I created a handheld toy that allows them to toggle different types of switches to individually control various light bulbs, satisfying their curiosity and desire to explore.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalBlinkyBox" data-lang="watch-video">Watch Video</a>
                             </div>
 
                             <!-- BlinkyBox Modal -->
@@ -785,14 +628,14 @@
                                 <img class="img-fluid small-project-image" src="assets/img/projects/Dem_baby_protector_ani.gif" alt="New Weekend Project Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">Safe Eats</h3>
+                                <h3 class="project-title" data-lang="project-safeeats-title">Safe Eats</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">Unity</span>
                                     <span class="project-tag">C#</span>
                                 </div>
                                 <!-- <p class="project-description">為了幫助我懷孕的太太快速確認哪些食物在懷孕期間不建議食用，我利用Unity開發了一個輕量級的2D應用。該應用能夠快速查詢食物的安全性、添加新的食物資訊至個人清單，以及通過提示燈顯示食物是否適合食用。</p> -->
-                                <p class="project-description">To help my pregnant wife quickly check which foods are not recommended during pregnancy, I developed a lightweight 2D app using Unity. The app allows for quick food safety checks, adding new food information to a personalized list, and indicating whether a food is safe to eat through an intuitive signal light.</p>
-                                <a href="https://github.com/BigTsung/pregnant_women_protector/tree/main" class="btn btn-primary" target="_blank">View Project on GitHub</a>
+                                <p class="project-description" data-lang="project-safeeats-description">To help my pregnant wife quickly check which foods are not recommended during pregnancy, I developed a lightweight 2D app using Unity. The app allows for quick food safety checks, adding new food information to a personalized list, and indicating whether a food is safe to eat through an intuitive signal light.</p>
+                                <a href="https://github.com/BigTsung/pregnant_women_protector/tree/main" class="btn btn-primary" target="_blank" data-lang="view-project-on-GitHub">View Project on GitHub</a>
                             </div>
                         </div>
 
@@ -803,13 +646,13 @@
                                 <img class="img-fluid project-image" src="assets/img/projects/result_small_scaling_half.gif" alt="Weekend Project Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">Automated Sensor Trash Can</h3>
+                                <h3 class="project-title" data-lang="project-trashcan-title">Automated Sensor Trash Can</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">C++</span>
                                     <span class="project-tag">Arduino</span>
                                 </div>
-                                <p class="project-description">In my spare time, I designed and built an automated sensor trash can that opens when a user approaches. This project involved prototyping with Arduino, integrating sensors, and designing a compact mechanism. The trash can provides a touchless experience and is both practical and fun to use.</p>
-                                <a href="https://github.com/BigTsung/Arduino/tree/master/Smart_Trash_Can" class="btn btn-primary" target="_blank">View Project on GitHub</a>
+                                <p class="project-description" data-lang="project-trashcan-description">In my spare time, I designed and built an automated sensor trash can that opens when a user approaches. This project involved prototyping with Arduino, integrating sensors, and designing a compact mechanism. The trash can provides a touchless experience and is both practical and fun to use.</p>
+                                <a href="https://github.com/BigTsung/Arduino/tree/master/Smart_Trash_Can" class="btn btn-primary" target="_blank" data-lang="view-project-on-GitHub">View Project on GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -817,14 +660,14 @@
                      <!-- Academic Project -->
                      <div class="project-item-academic mb-5">
                         <h3 class="project-category-title">
-                            <span class="project-badge badge-academic">Academic Project</span>
+                            <span class="project-badge badge-academic" data-lang="academic-project">Academic Project</span>
                         </h3>
                         <div class="row">
                             <div class="col-md-6">
                                 <img class="img-fluid project-image" src="assets/img/projects/Analyze_water_quality_studying.png" alt="Project 1 Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">Research on fish posture analysis and water quality monitoring</h3>
+                                <h3 class="project-title" data-lang="project-fishanalysis-title">Research on fish posture analysis and water quality monitoring</h3>
                                 <!-- <p class="project-tag">#C++, #MFC</p> -->
                                 <div class="project-tags">
                                     <span class="project-tag">C++</span>
@@ -832,9 +675,9 @@
                                     <span class="project-tag">MFC</span>
                                 </div>
                                 <!-- <p class="project-description">該專案與自來水廠合作，旨在透過監控魚體姿態來評估水質狀況。我們引入取水源頭的水，分別導入兩個水箱中，每個水箱內都飼養了一隻已適應水質的朱文錦作為檢測魚。在水箱的前方與側面各設置了一台攝影機進行監控，透過背景移除和動態物件消除技術建立乾淨的背景，再結合形態學處理來精準抓取魚體區塊。隨後，我們利用SVM模型進行魚體朝向的辨識和分類，達成即時統計與水質分析的目的。當系統檢測到兩缸魚體皆出現異常行為時，會自動發送簡訊通知維護人員。該專案完全使用C++開發，並運用了多執行緒技術加速雙通道影像處理，同時採用MFC進行介面開發。</p> -->
-                                <p class="project-description">This project was developed in collaboration with the water treatment plant to assess water quality by analyzing fish posture. Water from the source is introduced into two separate tanks, each containing a goldfish (Carassius auratus) that has adapted to the water conditions. Cameras are positioned at the front and side of each tank to monitor the fish. The system leverages background removal and dynamic object elimination to establish a clean background, combined with morphological processing to accurately capture the fish’s body region. An SVM model is then used to classify and recognize the fish’s orientation, enabling real-time statistical analysis and water quality assessment. If both tanks show signs of abnormal fish behavior, the system automatically sends a text message to notify maintenance personnel. The entire project was developed in C++, with multi-threading used to accelerate dual-channel video processing, and MFC employed for interface development.</p>
+                                <p class="project-description" data-lang="project-fishanalysis-description">This project was developed in collaboration with the water treatment plant to assess water quality by analyzing fish posture. Water from the source is introduced into two separate tanks, each containing a goldfish (Carassius auratus) that has adapted to the water conditions. Cameras are positioned at the front and side of each tank to monitor the fish. The system leverages background removal and dynamic object elimination to establish a clean background, combined with morphological processing to accurately capture the fish’s body region. An SVM model is then used to classify and recognize the fish’s orientation, enabling real-time statistical analysis and water quality assessment. If both tanks show signs of abnormal fish behavior, the system automatically sends a text message to notify maintenance personnel. The entire project was developed in C++, with multi-threading used to accelerate dual-channel video processing, and MFC employed for interface development.</p>
                                 <!-- <a href="https://www.researchgate.net/publication/221544440_Analysis_and_comparison_of_fish_posture_by_image_processing" target="_blank" style="text-decoration: underline; color: #007bff;">Conference Paper</a> -->
-                                <a href="https://www.researchgate.net/publication/221544440_Analysis_and_comparison_of_fish_posture_by_image_processing" class="btn btn-primary" target="_blank">Read Paper</a>
+                                <a href="https://www.researchgate.net/publication/221544440_Analysis_and_comparison_of_fish_posture_by_image_processing" class="btn btn-primary" target="_blank" data-lang="read-paper">Read Paper</a>
                             
                             </div>
 
@@ -845,7 +688,7 @@
                                 <img class="img-fluid small_40-project-image" src="assets/img/projects/Demo_3D_display_ani.gif" alt="Project 1 Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">FreeView 3D</h3>
+                                <h3 class="project-title" data-lang="project-freeview3d-title">FreeView 3D</h3>
                                 <!-- <p class="project-tag">#C++, #MFC</p> -->
                                 <div class="project-tags">
                                     <span class="project-tag">C++</span>
@@ -854,8 +697,8 @@
                                     <span class="project-tag">Bullet Physics SDK</span>
                                 </div>
                                 <!-- <p class="project-description">這個專案是一個裸視3D顯示系統，透過偵測使用者的頭部位置來動態顯示不同視角下的3D內容。整體流程包括利用OpenCV進行實時人臉和頭部位置偵測，以準確捕捉使用者的觀看角度。然後，使用Bullet Physics SDK進行場景中物體的物理模擬運算，模擬真實世界中的物理效果，如重力和碰撞等。最終，透過OpenGL渲染出對應視角的3D畫面，使得使用者在不同角度下都能看到連續且真實的3D效果。該系統不需要佩戴任何特殊眼鏡，即可實現3D顯示效果，適用於各類互動展示場景。</p> -->
-                                <p class="project-description">This project is an autostereoscopic 3D display system that dynamically adjusts the displayed 3D content based on the user’s head position. The system first utilizes OpenCV for real-time face and head position detection, accurately capturing the user’s viewing angle. Bullet Physics SDK is then employed to simulate the physical behavior of objects in the scene, including realistic effects like gravity and collisions. Finally, OpenGL is used to render the corresponding 3D scene based on the detected viewing angle, ensuring a smooth and immersive 3D experience from different perspectives. The system delivers a glasses-free 3D display, making it ideal for interactive showcases and exhibitions.</p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalFreeview3D">Watch Video</a>
+                                <p class="project-description" data-lang="project-freeview3d-description">This project is an autostereoscopic 3D display system that dynamically adjusts the displayed 3D content based on the user’s head position. The system first utilizes OpenCV for real-time face and head position detection, accurately capturing the user’s viewing angle. Bullet Physics SDK is then employed to simulate the physical behavior of objects in the scene, including realistic effects like gravity and collisions. Finally, OpenGL is used to render the corresponding 3D scene based on the detected viewing angle, ensuring a smooth and immersive 3D experience from different perspectives. The system delivers a glasses-free 3D display, making it ideal for interactive showcases and exhibitions.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalFreeview3D" data-lang="watch-video">Watch Video</a>
                             </div>
 
                              <!-- FreeView 3D Modal -->
@@ -881,15 +724,15 @@
                                 <img class="img-fluid project-image" src="assets/img/projects/Demo_people_counting.jpg" alt="People Counting Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">People Counting</h3>
+                                <h3 class="project-title" data-lang="project-peoplecounting-title">People Counting</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">C++</span>
                                     <span class="project-tag">OpenCV</span>
                                     <span class="project-tag">MFC</span>
                                 </div>
                                 <!-- <p class="project-description">這是一個利用電腦視覺技術進行人流計數的學術專案。該系統架設了一台俯視攝影機，能夠實時監控並記錄人員流動情況。專案使用OpenCV進行背景建模和前景偵測，從而分離出移動的目標，並透過形態學處理技術精確地提取人員輪廓，進行有效的計數。為了更直觀地展示結果，系統使用MFC開發了一個用戶介面，可以即時顯示計數結果及處理後的影像。該系統適合應用於需要人流統計的場所，如公共交通、商業設施或活動場地，提供精準且即時的數據支援。</p> -->
-                                <p class="project-description">This is an academic project focused on people counting using computer vision techniques. The system is equipped with a top-view camera that continuously monitors and tracks people flow in real time. The project uses OpenCV for background modeling and foreground detection, allowing the system to isolate moving targets. Morphological processing techniques are applied to accurately extract human contours for effective counting. To present the results intuitively, an interface was developed using MFC, which displays real-time counting results and processed images. This system is ideal for environments requiring crowd analytics, such as public transport stations, commercial spaces, or event venues, providing accurate and timely data support.</p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalPeopleCounting">Watch Video</a>
+                                <p class="project-description" data-lang="project-peoplecounting-description">This is an academic project focused on people counting using computer vision techniques. The system is equipped with a top-view camera that continuously monitors and tracks people flow in real time. The project uses OpenCV for background modeling and foreground detection, allowing the system to isolate moving targets. Morphological processing techniques are applied to accurately extract human contours for effective counting. To present the results intuitively, an interface was developed using MFC, which displays real-time counting results and processed images. This system is ideal for environments requiring crowd analytics, such as public transport stations, commercial spaces, or event venues, providing accurate and timely data support.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalPeopleCounting" data-lang="watch-video">Watch Video</a>
                             </div>
                             
                             <!-- People Counting Modal -->
@@ -916,15 +759,15 @@
                                 <img class="img-fluid project-image" src="assets/img/projects/Demo_digital_recognition.gif" alt="Digital Recognition Image">
                             </div>
                             <div class="col-md-6">
-                                <h3 class="project-title">Digital Recognition</h3>
+                                <h3 class="project-title" data-lang="project-digitalrecognition-title">Digital Recognition</h3>
                                 <div class="project-tags">
                                     <span class="project-tag">MATLAB</span>
                                     <span class="project-tag">SVM</span>
                                     <span class="project-tag">PCA</span>
                                 </div>
                                 <!-- <p class="project-description">這是一個利用 MATLAB 開發的數字辨識專案。該專案提供了一個手寫介面，讓使用者可以直接手寫輸入想要辨識的數字。系統背後使用了SVM（支持向量機）進行分類，並結合PCA進行降維處理，確保在降低數據維度的同時維持高辨識準確度。透過這個流程，系統能夠有效處理手寫輸入中的變異，並快速識別輸入的數字，展示了機器學習在圖像辨識領域的應用。</p> -->
-                                <p class="project-description">This project is a digit recognition system developed using MATLAB. It provides a handwriting interface where users can directly write the numbers they want to recognize. The system utilizes SVM (Support Vector Machine) for classification and integrates PCA for dimensionality reduction, ensuring high recognition accuracy while reducing data complexity. Through this process, the system effectively handles variations in handwritten inputs and quickly identifies the numbers, showcasing the application of machine learning in image recognition.</p>
-                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalDigitalRecognition">Watch Video</a>
+                                <p class="project-description" data-lang="project-digitalrecognition-description">This project is a digit recognition system developed using MATLAB. It provides a handwriting interface where users can directly write the numbers they want to recognize. The system utilizes SVM (Support Vector Machine) for classification and integrates PCA for dimensionality reduction, ensuring high recognition accuracy while reducing data complexity. Through this process, the system effectively handles variations in handwritten inputs and quickly identifies the numbers, showcasing the application of machine learning in image recognition.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModalDigitalRecognition" data-lang="watch-video">Watch Video</a>
                             </div>
                             
                             <!-- Digital Recognition Modal -->
@@ -954,32 +797,32 @@
             <!-- Education-->
             <section class="resume-section" id="education">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
+                    <h2 class="mb-5" data-lang="education-title">Education</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">National Dong Hwa University</h3>
-                            <div class="subheading mb-3">Master's degree</div>
-                            <div>Computer Science & Information Engineering</div>
-                            <p>GPA: 4.33</p>
+                            <h3 class="mb-0" data-lang="education-university">National Dong Hwa University</h3>
+                            <div class="subheading mb-3" data-lang="education-degree">Master's degree</div>
+                            <div data-lang="education-major">Computer Science & Information Engineering</div>
+                            <p data-lang="education-gpa">GPA: 4.33</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2011 - May 2013</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary" data-lang="education-duration-3">August 2011 - May 2013</span></div>
                     </div>
                     
-                    <!-- 新增出版作品區塊 -->
+                    <!-- Publications Section -->
                     <div class="publications">
-                        <h3 class="mb-3">Publications</h3>
+                        <h3 class="mb-3" data-lang="publications-title">Publications</h3>
                         <ul class="custom-list">
                             <li>
-                                <strong>Analysis and comparison of fish posture by image processing</strong><br>
-                                Published in: <em>International Conference on Machine Learning and Cybernetics, 2010</em><br>
-                                <a href="https://www.researchgate.net/publication/221544440_Analysis_and_comparison_of_fish_posture_by_image_processing" target="_blank" style="text-decoration: underline; color: #007bff;">Read Paper</a>
+                                <strong data-lang="publication-title-1">Analysis and comparison of fish posture by image processing</strong><br>
+                                <span data-lang="publication-conference-1">Published in: <em>International Conference on Machine Learning and Cybernetics, 2010</em></span><br>
+                                <a href="https://www.researchgate.net/publication/221544440_Analysis_and_comparison_of_fish_posture_by_image_processing" target="_blank" style="text-decoration: underline; color: #007bff;" data-lang="read-paper">Read Paper</a>
                             </li>
                             <li>
-                                <strong>Virtual Multiple-Perspective Display Using Pyramidal or Conical Showcase</strong><br>
-                                Published in: <em>ICS, 2013</em><br>
-                                <a href="https://link.springer.com/chapter/10.1007/978-3-642-35473-1_44" target="_blank" style="text-decoration: underline; color: #007bff;">Read Paper</a>
+                                <strong data-lang="publication-title-2">Virtual Multiple-Perspective Display Using Pyramidal or Conical Showcase</strong><br>
+                                <span data-lang="publication-conference-2">Published in: <em>ICS, 2013</em></span><br>
+                                <a href="https://link.springer.com/chapter/10.1007/978-3-642-35473-1_44" target="_blank" style="text-decoration: underline; color: #007bff;" data-lang="read-paper">Read Paper</a>
                             </li>
-                            <!-- 可以添加更多出版作品 -->
+                            <!-- Additional publications can be added here -->
                         </ul>
                     </div>
                 </div>
@@ -989,19 +832,29 @@
             <!-- Interests-->
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
-                    <p class="lead mb-4">In my free time, I love reading, watching movies, and catching up on TV series—they help me unwind and enjoy some quiet moments. Outdoors, I enjoy cycling and hiking, taking in the scenery, and snapping a few photos along the way. These activities keep me balanced and make life more enjoyable.</p>
-                    <p class="lead mb-4">Besides reading and outdoor activities, I enjoy getting hands-on with fun DIY projects. I once made a simple automatic sensor trash can that opens when you approach it—really handy! I also created some interactive toys for my son, like a light that he can control with his hands. He loves playing with them. These little projects add some fun to my busy days and give my son some cool toys to enjoy.</p>
-                    <p class="lead mb-4">I enjoy capturing life’s moments with my camera, whether it’s the warmth of everyday scenes or a beautiful view I stumble upon during a trip. Photography, for me, is a way to freeze those touching moments and appreciate the little things in life.</p>
+                    <h2 class="mb-5" data-lang="interests-title">Interests</h2>
+                    
+                    <p class="lead mb-4" data-lang="interests-paragraph-1">
+                        In my free time, I love reading, watching movies, and catching up on TV series—they help me unwind and enjoy some quiet moments. Outdoors, I enjoy cycling and hiking, taking in the scenery, and snapping a few photos along the way. These activities keep me balanced and make life more enjoyable.
+                    </p>
+                    
+                    <p class="lead mb-4" data-lang="interests-paragraph-2">
+                        Besides reading and outdoor activities, I enjoy getting hands-on with fun DIY projects. I once made a simple automatic sensor trash can that opens when you approach it—really handy! I also created some interactive toys for my son, like a light that he can control with his hands. He loves playing with them. These little projects add some fun to my busy days and give my son some cool toys to enjoy.
+                    </p>
+                    
+                    <p class="lead mb-4" data-lang="interests-paragraph-3">
+                        I enjoy capturing life’s moments with my camera, whether it’s the warmth of everyday scenes or a beautiful view I stumble upon during a trip. Photography, for me, is a way to freeze those touching moments and appreciate the little things in life.
+                    </p>
+                    
                     <!-- 圖片展示區 -->
                     <div class="interests-gallery">
-                        <img src="assets/img/photography/IMG_3357.JPG" alt="Photography">
-                        <img src="assets/img/photography/IMG_3720.JPG" alt="Photography">
-                        <img src="assets/img/photography/IMG_3772.JPG" alt="Photography">
-                        <img src="assets/img/photography/IMG_3775.JPG" alt="Photography">
-                        <img src="assets/img/photography/IMG_3781.JPG" alt="Photography">
-                        <img src="assets/img/photography/IMG_6300.JPG" alt="Photography">
-                        <img src="assets/img/photography/IMG_6801.JPG" alt="Photography">
+                        <img src="assets/img/photography/IMG_3357.JPG" alt="Photography" data-lang="interests-image-alt">
+                        <img src="assets/img/photography/IMG_3720.JPG" alt="Photography" data-lang="interests-image-alt">
+                        <img src="assets/img/photography/IMG_3772.JPG" alt="Photography" data-lang="interests-image-alt">
+                        <img src="assets/img/photography/IMG_3775.JPG" alt="Photography" data-lang="interests-image-alt">
+                        <img src="assets/img/photography/IMG_3781.JPG" alt="Photography" data-lang="interests-image-alt">
+                        <img src="assets/img/photography/IMG_6300.JPG" alt="Photography" data-lang="interests-image-alt">
+                        <img src="assets/img/photography/IMG_6801.JPG" alt="Photography" data-lang="interests-image-alt">
                     </div>
                     
                     <p class="mb-0">.</p>
@@ -1045,5 +898,52 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <!-- Language Toggle Button -->
+       <button id="languageToggle" class="btn btn-outline-primary" style="position: fixed; top: 20px; right: 20px; z-index: 1000; border-radius: 20px; padding: 8px 20px;">
+            中文
+        </button>
+        <script>
+           let currentLanguage = 'en';
+
+            // Function to load JSON file and update content
+            async function loadLanguageFile(lang) {
+                try {
+                    const response = await fetch(`assets/translations/${lang}.json`);
+                    const translations = await response.json();
+
+                    // Update elements with id
+                    for (const id in translations) {
+                        const elementById = document.getElementById(id);
+                        if (elementById) {
+                            elementById.textContent = translations[id];
+                        }
+                    }
+
+                    // Update elements with data-lang
+                    document.querySelectorAll('[data-lang]').forEach(element => {
+                        const langKey = element.getAttribute('data-lang');
+                        if (translations[langKey]) {
+                            element.textContent = translations[langKey];
+                        }
+                    });
+
+                    // Update language toggle button text
+                    document.getElementById('languageToggle').textContent = lang === 'en' ? '中文' : 'English';
+                } catch (error) {
+                    console.error("Error loading language file:", error);
+                }
+            }
+
+            // Toggle button click event
+            document.getElementById('languageToggle').addEventListener('click', () => {
+                currentLanguage = currentLanguage === 'en' ? 'zh' : 'en';
+                loadLanguageFile(currentLanguage);
+            });
+
+            // Initial content setup
+            loadLanguageFile(currentLanguage);
+        </script>
+
     </body>
 </html>
