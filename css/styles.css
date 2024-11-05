@@ -11313,3 +11313,11 @@ section.resume-section .resume-section-content {
   height: auto;
 }
 
+/* 增加行距的樣式 */
+.chinese-line-height p {
+  line-height: 1.8; /* 調整中文行距 */
+}
+
+#content p {
+  line-height: 1.5; /* 預設英文行距 */
+}

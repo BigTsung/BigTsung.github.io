@@ -803,6 +803,7 @@
                             <h3 class="mb-0" data-lang="education-university">National Dong Hwa University</h3>
                             <div class="subheading mb-3" data-lang="education-degree">Master's degree</div>
                             <div data-lang="education-major">Computer Science & Information Engineering</div>
+                            <div data-lang="phi-tau-phi">(The honor member of Phi Tau Phi Scholastic Honor Society)</div>
                             <p data-lang="education-gpa">GPA: 4.33</p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary" data-lang="education-duration-3">August 2011 - May 2013</span></div>
@@ -900,18 +901,19 @@
         <script src="js/scripts.js"></script>
 
         <!-- Language Toggle Button -->
-       <button id="languageToggle" class="btn btn-outline-primary" style="position: fixed; top: 20px; right: 20px; z-index: 1000; border-radius: 20px; padding: 8px 20px;">
+        <button id="languageToggle" class="btn btn-outline-primary" style="position: fixed; bottom: 40px; right: 20px; z-index: 1000; border-radius: 20px; padding: 8px 20px;">
             中文
         </button>
+        
         <script>
-           let currentLanguage = 'en';
-
+            let currentLanguage = 'en';
+        
             // Function to load JSON file and update content
             async function loadLanguageFile(lang) {
                 try {
                     const response = await fetch(`assets/translations/${lang}.json`);
                     const translations = await response.json();
-
+        
                     // Update elements with id
                     for (const id in translations) {
                         const elementById = document.getElementById(id);
@@ -919,7 +921,7 @@
                             elementById.textContent = translations[id];
                         }
                     }
-
+        
                     // Update elements with data-lang
                     document.querySelectorAll('[data-lang]').forEach(element => {
                         const langKey = element.getAttribute('data-lang');
@@ -927,20 +929,23 @@
                             element.textContent = translations[langKey];
                         }
                     });
-
+        
                     // Update language toggle button text
                     document.getElementById('languageToggle').textContent = lang === 'en' ? '中文' : 'English';
+        
+                    // Change line height based on language
+                    document.body.style.lineHeight = lang === 'zh' ? '1.6' : '1.5';
                 } catch (error) {
                     console.error("Error loading language file:", error);
                 }
             }
-
+        
             // Toggle button click event
             document.getElementById('languageToggle').addEventListener('click', () => {
                 currentLanguage = currentLanguage === 'en' ? 'zh' : 'en';
                 loadLanguageFile(currentLanguage);
             });
-
+        
             // Initial content setup
             loadLanguageFile(currentLanguage);
         </script>
