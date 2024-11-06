@@ -11074,6 +11074,7 @@ section.resume-section .resume-section-content {
 }
 
 .custom-list {
+  text-align: justify;
   list-style-type: none; /* 移除默認項目符號 */
   padding-left: 1em; /* 調整左側縮進 */
   margin: 0;
@@ -11125,6 +11126,7 @@ section.resume-section .resume-section-content {
 }
 
 .project-description {
+  text-align: justify;
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 15px;
