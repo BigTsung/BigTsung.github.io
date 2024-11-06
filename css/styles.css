@@ -8122,9 +8122,16 @@ textarea.form-control-lg {
   color: #6c757d !important;
 }
 
-.text-chinese {
+.text-name-english {
   --bs-text-opacity: 1;
-  font-size: 4rem;
+  font-size: 3.5rem;
+  color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+  /* color: #6c757d !important; */
+}
+
+.text-name-chinese {
+  --bs-text-opacity: 1;
+  font-size: 3rem;
   color: #6c757d !important;
 }
 
