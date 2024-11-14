@@ -11332,3 +11332,17 @@ section.resume-section .resume-section-content {
 #content p {
   line-height: 1.5; /* 預設英文行距 */
 }
+
+#scrollToTopBtn {
+  display: none; /* 頁面加載時隱藏按鈕 */
+  background-color: #486a83;
+  color: #ffffff;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  opacity: 0.8;
+}

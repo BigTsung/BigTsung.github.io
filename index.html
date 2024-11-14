@@ -905,6 +905,11 @@
             中文
         </button>
         
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTopBtn" class="btn btn-primary" style="position: fixed; bottom: 100px; right: 20px; z-index: 1000; border-radius: 20px; padding: 8px 20px;">
+            ↑ Top
+        </button>
+
         <script>
             let currentLanguage = 'en';
         
@@ -948,7 +953,27 @@
         
             // Initial content setup
             loadLanguageFile(currentLanguage);
+            
+
+            // Scroll to Top Button functionality
+            window.onscroll = function() {
+                const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    scrollToTopBtn.style.display = "block";
+                } else {
+                    scrollToTopBtn.style.display = "none";
+                }
+            };
+
+            document.getElementById("scrollToTopBtn").addEventListener("click", function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+
         </script>
+
 
     </body>
 </html>
