@@ -76,6 +76,8 @@
     "_project-flowtracking-title": "即時人流追蹤",
     "project-flowtracking-description": "這個專案主要利用LiDAR技術進行即時的人流監測與追蹤。LiDAR裝置被安裝在街道入口，透過偵測並追蹤人流來控制人員的進出量。該系統使用Unity開發了一個直觀的介面，讓使用者能夠快速查看人流數和3D人流變化情況，同時數據會即時傳送至AWS進行統計分析，進而實現人流控制。特別是在疫情期間，該系統幫助控制進出人數並發出警示。該專案還獲得了Global ICT Excellence Award的殊榮。",
     "_weekend-project": "週末專案",
+    "_project-flagMaster-title": "我要成為國旗王",
+    "project-flagMaster-description": "這款國旗猜測遊戲結合教育與娛樂，旨在幫助玩家學習並記住世界各國的國旗和知識。應用以 Unity 開發，支援中文與英文，提供五種遊戲模式（如無盡挑戰、限時模式、錯題複習等），滿足多樣化需求。技術上，利用 JSON 驅動國旗資料，結合 LeanTween 實現流暢的 UI 動畫與視覺特效，並內建答題準確率統計與個人化數據界面，幫助玩家重點復習。設計上，界面簡潔直觀，結合動態按鈕與聲音回饋，提升沉浸感。未來將加入地圖功能與更多遊戲模式，進一步增強趣味性與互動性，為玩家提供學習國旗的有趣方式。",
     "_project-financeapp-title": "金融應用程式（暫定）",
     "project-financeapp-description": " 目前我正在進行一個專案，讓使用者只需簡單輸入股票代號即可檢視股票的相關資訊。其中包括即時價格、交易量、價格變化、開盤價和KD值。而最終目標是希望可以整合自訂演算法來篩選出理想的股票。該專案使用Python開發，並在macOS上運行。",
     "_project-blinkybox-title": "閃燈盒",
