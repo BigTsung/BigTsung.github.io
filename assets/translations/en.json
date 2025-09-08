@@ -76,6 +76,8 @@
     "project-flowtracking-title": "Realtime Flow Tracking",
     "project-flowtracking-description": "This project focuses on real-time people tracking and crowd monitoring using LiDAR technology. LiDAR sensors are installed at key street entrances to detect and track pedestrian flow for crowd control. The system is integrated with a Unity-based interface, providing a user-friendly way to monitor crowd density and visualize 3D crowd movement. The data is continuously sent to AWS for statistical analysis to help manage crowd flow effectively. During the pandemic, this system proved particularly useful for controlling the number of people entering and exiting the area and issuing alerts when necessary. The project also received the Global ICT Excellence Award.",
     "weekend-project": "Weekend Project",
+    "project-StartTrackingMeals-title": "Start Tracking Meals",
+    "project-StartTrackingMeals-description": "Start Tracking Meals is an iOS app designed to make daily nutrition tracking simple and fun. No tedious setup—just snap a photo or scan a barcode, and your meal’s calories and protein are instantly recorded. Your daily intake of calories, protein, carbs, and water is displayed in clean, easy-to-read charts so you can keep track of your goals anytime. Sneaked in a snack? Don’t worry—the “Sneaky Snack Log” will save the moment for a fun look back. With Google Gemini AI analyzing nutrition labels for you, logging is faster than ever. From meals, workouts, and weight tracking to exporting reports, everything fits neatly into this smart, user-friendly app.",
     "project-TagandTrack-title": "“Record Your Love” — Your Personal Collection Buddy",
     "project-TagandTrack-description": "Simply scan a barcode with your iPhone and instantly add the item to your collection list.Whether it’s books, toys, limited-edition figures, wine, music albums, or even your favorite food list — you can organize, categorize, and add personal notes with ease.Built-in search helps you quickly find what you’re looking for, and you can even generate a QR code to share your collection with friends.With its clean and intuitive design, managing your treasures is effortless — no more duplicate purchases or forgotten items hiding in the corner.",
     "project-flagMaster-title": "Flag Master",
@@ -123,4 +125,5 @@
     "view-project-on-GitHub" : "View Project on GitHub",
     "read-news" : "Read News",
     "read-paper": "Read Paper"
-}
+
+    }

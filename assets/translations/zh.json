@@ -76,7 +76,9 @@
     "_project-flowtracking-title": "即時人流追蹤",
     "project-flowtracking-description": "這個專案主要利用LiDAR技術進行即時的人流監測與追蹤。LiDAR裝置被安裝在街道入口，透過偵測並追蹤人流來控制人員的進出量。該系統使用Unity開發了一個直觀的介面，讓使用者能夠快速查看人流數和3D人流變化情況，同時數據會即時傳送至AWS進行統計分析，進而實現人流控制。特別是在疫情期間，該系統幫助控制進出人數並發出警示。該專案還獲得了Global ICT Excellence Award的殊榮。",
     "_weekend-project": "週末專案",
-    "project-TagandTrack-title": "「記讀你的愛」——你的收藏小幫手",
+     "project-StartTrackingMeals-title": "記食開始(Coming Soon)",
+    "project-StartTrackingMeals-description": "**《記食開始》**是一款專為日常飲食打造的 iOS App。不需要複雜的設定，只要拍張照片或掃一下條碼，就能快速記錄餐點與營養資訊。每天的熱量、蛋白質、碳水與喝水進度，都會用簡單直覺的圖表顯示，讓你隨時掌握健康目標。想偷吃零食？沒問題，還有「偷吃記錄」幫你暗暗留下一筆，讓回顧時會心一笑。除了日常紀錄，也能透過 Google Gemini AI 自動分析營養標籤，幫你更快完成輸入。從飲食、運動到體重追蹤，甚至匯出報表分享，一切都能在這個小巧卻聰明的 App 中完成。",
+    "project-TagandTrack-title": "「記讀你的愛」— 你的收藏小幫手",
     "project-TagandTrack-description": "「每次看到心愛的東西，總怕已經買過？ 這款 App 就是專門為收藏控設計的記錄工具！只要用 iPhone 拍一下條碼，就能立刻把物品加入收藏清單。無論是書籍、玩具、限量公仔、酒、唱片，甚至是最愛的美食，都能快速整理、分類，還能加上自己的備註。內建搜尋功能讓你隨時找到想要的收藏，還能產生 QR Code 跟朋友分享。介面簡單直覺，不管身在何處，都能輕鬆管理珍藏，再也不怕重複購入或遺忘角落的寶貝。",
     "_project-flagMaster-title": "我要成為國旗王",
     "project-flagMaster-description": "這款國旗猜測遊戲結合教育與娛樂，旨在幫助玩家學習並記住世界各國的國旗和知識。應用以 Unity 開發，支援中文與英文，提供五種遊戲模式（如無盡挑戰、限時模式、錯題複習等），滿足多樣化需求。技術上，利用 JSON 驅動國旗資料，結合 LeanTween 實現流暢的 UI 動畫與視覺特效，並內建答題準確率統計與個人化數據界面，幫助玩家重點復習。設計上，界面簡潔直觀，結合動態按鈕與聲音回饋，提升沉浸感。未來將加入地圖功能與更多遊戲模式，進一步增強趣味性與互動性，為玩家提供學習國旗的有趣方式。",
@@ -121,4 +123,4 @@
     "view-project-on-GitHub" : "瀏覽GitHub",
     "read-news" : "相關新聞",
     "read-paper": "相關論文"
-}
+   }
