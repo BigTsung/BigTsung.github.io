@@ -92,6 +92,8 @@
     "project-safeeats-description": "為了我懷孕的老婆可以快速確認哪些食物在懷孕期間不建議食用，我使用Unity開發了一個輕量級的2D app。可以快速的查詢食物的安全性，並通過提示燈提示食物是否適合食用。",
     "_project-trashcan-title": "自動感應垃圾桶",
     "project-trashcan-description": " 在空閒的時間，我設計並製作了一個自動感應垃圾桶，當使用者靠近時會自動的打開。該專案包含Arduino prototype製作、感應器整合和結構設計，並提供了無接觸的使用體驗，既實用又有趣。",
+    "project-stockanalysis-title": "美股財報分析網站",
+    "project-stockanalysis-description": "一個基於 Flask 的美股（與台股）財務分析網站。提供營收、獲利、現金流、流動性與償債能力等總覽圖表、TradingView 互動式 K 線圖、估值倍數（P/E、P/B、EV/EBITDA、ROE…），以及 10 項投資檢查清單評分，並以此排出你所有分析過個股的排行榜。完整的投資組合模組可追蹤持股、現金、已實現損益、每日淨值快照、產業配置與每月績效，並顯示即時美元／台幣匯率。此外還包含觀察清單、兩階段 DCF 估值計算機、市場儀表板、Google OAuth 登入與選用的 Google Drive 雲端同步、每日自動快照排程，以及中英雙語介面。資料來源以 StockAnalysis.com 爬蟲為主、FMP API 為備援，並用 yfinance 取得即時股價。",
     "project-stickergenerator-title": "貼圖生成器",
     "project-stickergenerator-description": "一個網頁版工具，能將圖片自動排版並加上文字，製作成高品質的貼圖。使用 Flask 與 Pillow 開發，提供現代化網頁介面與即時自動預覽，支援本機字體瀏覽與即時切換、針對個別圖片的排版微調（將人物推至左／右／上／下），並可精細調整描邊比例與外邊距。透過多核心平行運算，可在數秒內批次生成大量貼圖，且每次執行都會記錄完整的復原指令。",
     "academic-project": "學術專案",

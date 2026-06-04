@@ -129,6 +129,15 @@ const PROJECTS = [
 
   /* ---------------- Personal / Weekend ---------------- */
   {
+    id: 'stockanalysis',
+    category: 'personal',
+    titleKey: 'project-stockanalysis-title',
+    descKey: 'project-stockanalysis-description',
+    tags: ['Python', 'Flask', 'SQLAlchemy', 'Chart.js', 'yfinance'],
+    images: ['Project_StockAnalysis_analysis.png', 'Project_StockAnalysis_portfolio.png', 'Project_StockAnalysis_leaderboard.png'],
+    links: [{ type: 'github', url: 'https://github.com/BigTsung/stock_analysis' }]
+  },
+  {
     id: 'stickergenerator',
     category: 'personal',
     titleKey: 'project-stickergenerator-title',
