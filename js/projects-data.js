@@ -129,6 +129,16 @@ const PROJECTS = [
 
   /* ---------------- Personal / Weekend ---------------- */
   {
+    id: 'stickergenerator',
+    category: 'personal',
+    titleKey: 'project-stickergenerator-title',
+    descKey: 'project-stickergenerator-description',
+    tags: ['Python', 'Flask', 'Pillow', 'Web UI'],
+    thumb: 'Project_StickerGenerator_success.png',
+    images: ['Project_StickerGenerator_main.png', 'Project_StickerGenerator_preview.png', 'Project_StickerGenerator_config.png', 'Project_StickerGenerator_success.png'],
+    links: [{ type: 'github', url: 'https://github.com/BigTsung/sticker-generator' }]
+  },
+  {
     id: 'starttrackingmeals',
     category: 'personal',
     titleKey: 'project-StartTrackingMeals-title',

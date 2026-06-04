@@ -7,7 +7,7 @@
 
   /* ----------------------------- i18n ----------------------------------- */
   const DICTS = {};            // { en: {...}, zh: {...} }
-  let lang = localStorage.getItem('lang') || 'en';
+  let lang = localStorage.getItem('lang') || 'zh';   // default: Chinese
 
   const t = (key) =>
     (DICTS[lang] && DICTS[lang][key]) ??
@@ -35,8 +35,8 @@
 
   async function loadDicts() {
     const [en, zh] = await Promise.all([
-      fetch('assets/translations/en.json').then((r) => r.json()),
-      fetch('assets/translations/zh.json').then((r) => r.json())
+      fetch('assets/translations/en.json?v=3').then((r) => r.json()),
+      fetch('assets/translations/zh.json?v=3').then((r) => r.json())
     ]);
     DICTS.en = en;
     DICTS.zh = zh;
@@ -45,8 +45,7 @@
   /* ----------------------------- Theme ---------------------------------- */
   function initTheme() {
     const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = saved || (prefersDark ? 'dark' : 'light');
+    const theme = saved || 'light';   // default: light (unless user chose otherwise)
     document.documentElement.setAttribute('data-theme', theme);
     updateThemeIcon(theme);
   }
@@ -88,7 +87,7 @@
       (a, b) => CATEGORY_ORDER[a.category] - CATEGORY_ORDER[b.category]
     );
     grid.innerHTML = ordered.map((p) => {
-      const img = PROJECT_IMG + p.images[0];
+      const img = PROJECT_IMG + (p.thumb || p.images[0]);   // optional custom card cover
       const tags = p.tags.slice(0, 4).map((tg) => `<span class="tag">${tg}</span>`).join('');
       const award = p.award
         ? `<span class="proj-card__award"><i class="fa-solid fa-trophy"></i><span data-i18n="award-text"></span></span>`
