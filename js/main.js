@@ -35,8 +35,8 @@
 
   async function loadDicts() {
     const [en, zh] = await Promise.all([
-      fetch('assets/translations/en.json?v=7').then((r) => r.json()),
-      fetch('assets/translations/zh.json?v=7').then((r) => r.json())
+      fetch('assets/translations/en.json?v=12').then((r) => r.json()),
+      fetch('assets/translations/zh.json?v=12').then((r) => r.json())
     ]);
     DICTS.en = en;
     DICTS.zh = zh;
@@ -112,6 +112,25 @@
     grid.querySelectorAll('.proj-card').forEach((card) => {
       card.addEventListener('click', () => openProjectModal(card.dataset.id));
     });
+  }
+
+  /* ----------------------------- Skills --------------------------------- */
+  function renderSkills() {
+    const grid = document.getElementById('skillsGrid');
+    if (!grid || typeof SKILL_GROUPS === 'undefined') return;
+    grid.innerHTML = SKILL_GROUPS.map((g) => {
+      const chips = g.items.map((it) => {
+        const icon = it.icon ? `<i class="${it.icon}"></i>` : '';
+        const cls = 'chip' + (it.core ? ' core' : '') + (g.exploring ? ' learning' : '');
+        const label = it.labelKey ? `<span data-i18n="${it.labelKey}"></span>` : it.name;
+        return `<span class="${cls}">${icon}${label}</span>`;
+      }).join('');
+      return `
+      <div class="skill-card reveal">
+        <h3><i class="${g.icon}"></i><span data-i18n="${g.titleKey}"></span></h3>
+        <div class="chips">${chips}</div>
+      </div>`;
+    }).join('');
   }
 
   function filterProjects(key) {
@@ -290,10 +309,13 @@
     safe(initTheme);
     safe(initNav);
     safe(initGlobal);
-    safe(initScrollUX);
     safe(renderFilters);
     safe(renderProjects);
+    safe(renderSkills);
     safe(initExperienceToggles);
+    // initScrollUX last: it observes .reveal elements, including the
+    // dynamically rendered skill cards, so they must exist by now.
+    safe(initScrollUX);
     try { await loadDicts(); } catch (e) { console.error('loadDicts', e); }
     safe(applyLang);
   }

@@ -33,6 +33,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Devicon (tech logos) -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +43,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
         rel="stylesheet" />
 
-    <link href="css/main.css?v=5" rel="stylesheet" />
+    <link href="css/main.css?v=10" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -128,6 +131,33 @@
             </div>
 
             <div class="timeline">
+                <!-- Current: full-time dad & independent developer -->
+                <div class="tl-item reveal">
+                    <div class="tl-card">
+                        <div class="tl-top">
+                            <div>
+                                <h3 class="tl-role" data-i18n="experience-current-position">Full-time Dad & Independent Developer</h3>
+                                <span class="tl-company" data-i18n="experience-current-company">Family Inc. · Self-Directed Learning</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:10px">
+                                <span class="tl-duration" data-i18n="experience-current-duration">July 2024 - Present</span>
+                            </div>
+                        </div>
+                        <div class="tl-collapse">
+                            <div class="tl-body">
+                                <div class="tl-subrole" data-i18n="experience-current-role">Parenting Ops & Continuous Self-Learning</div>
+                                <ul class="tl-list">
+                                    <li data-i18n="experience-current-detail-1"></li>
+                                    <li data-i18n="experience-current-detail-2"></li>
+                                    <li data-i18n="experience-current-detail-3"></li>
+                                    <li data-i18n="experience-current-detail-4"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="tl-toggle"><span data-i18n="btn-show-more">Show details</span> <i class="fa-solid fa-chevron-down"></i></button>
+                    </div>
+                </div>
+
                 <!-- Aemass -->
                 <div class="tl-item reveal">
                     <div class="tl-card">
@@ -258,58 +288,7 @@
                 <h2 class="section__title" data-i18n="skills-title">Skills</h2>
             </div>
 
-            <div class="skills-grid">
-                <div class="skill-card reveal">
-                    <h3><i class="fa-solid fa-code"></i><span data-i18n="skills-programming">Programming Languages & Tools</span></h3>
-                    <div class="chips">
-                        <span class="chip lang">Python</span>
-                        <span class="chip lang">Swift</span>
-                        <span class="chip lang">C++</span>
-                        <span class="chip lang">C#</span>
-                        <span class="chip lang">Unity</span>
-                        <span class="chip lang">Docker</span>
-                    </div>
-                </div>
-
-                <div class="skill-card reveal">
-                    <h3><i class="fa-solid fa-diagram-project"></i><span data-i18n="skills-workflow">Workflow</span></h3>
-                    <ul class="skill-list">
-                        <li><i class="fa-solid fa-check"></i><span data-i18n="workflow-mobile">Mobile-First, Responsive Design</span></li>
-                        <li><i class="fa-solid fa-check"></i><span data-i18n="workflow-testing">Cross Platform Testing & Debugging</span></li>
-                        <li><i class="fa-solid fa-check"></i><span data-i18n="workflow-teams">Cross Functional Teams</span></li>
-                        <li><i class="fa-solid fa-check"></i><span data-i18n="workflow-version">Version Control with Git & GitHub</span></li>
-                        <li><i class="fa-solid fa-check"></i><span data-i18n="workflow-optimization">Performance Optimization</span></li>
-                    </ul>
-                </div>
-
-                <div class="skill-card reveal">
-                    <h3><i class="fa-solid fa-eye"></i><span data-i18n="skills-libraries-cv">Libraries (CV/ML/AI)</span></h3>
-                    <div class="chips">
-                        <span class="chip">OpenCV</span><span class="chip">dlib</span><span class="chip">PyTorch</span>
-                    </div>
-                </div>
-
-                <div class="skill-card reveal">
-                    <h3><i class="fa-solid fa-cube"></i><span data-i18n="skills-libraries-3d">Libraries (3D)</span></h3>
-                    <div class="chips">
-                        <span class="chip">PCL</span><span class="chip">Open3D</span><span class="chip">Blender + Python</span>
-                    </div>
-                </div>
-
-                <div class="skill-card reveal">
-                    <h3><i class="fa-solid fa-vr-cardboard"></i><span data-i18n="skills-libraries-ar">Libraries (AR/VR)</span></h3>
-                    <div class="chips">
-                        <span class="chip">Unity + AR Foundation</span><span class="chip">ARKit</span><span class="chip">Vuforia</span>
-                    </div>
-                </div>
-
-                <div class="skill-card reveal">
-                    <h3><i class="fa-solid fa-camera"></i><span data-i18n="skills-sensors">RGBD Sensors</span></h3>
-                    <div class="chips">
-                        <span class="chip">Azure Kinect</span><span class="chip">Intel RealSense</span><span class="chip">Kinect v2</span>
-                    </div>
-                </div>
-            </div>
+            <div class="skills-grid" id="skillsGrid"></div>
         </div>
     </section>
 
@@ -430,8 +409,9 @@
         <img src="" alt="">
     </div>
 
-    <script src="js/projects-data.js?v=7"></script>
-    <script src="js/main.js?v=7"></script>
+    <script src="js/projects-data.js?v=10"></script>
+    <script src="js/skills-data.js?v=13"></script>
+    <script src="js/main.js?v=10"></script>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 
