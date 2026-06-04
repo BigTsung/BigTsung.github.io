@@ -136,7 +136,10 @@ const PROJECTS = [
     tags: ['Python', 'Flask', 'Pillow', 'Web UI'],
     thumb: 'Project_StickerGenerator_success.png',
     images: ['Project_StickerGenerator_main.png', 'Project_StickerGenerator_preview.png', 'Project_StickerGenerator_config.png', 'Project_StickerGenerator_success.png'],
-    links: [{ type: 'github', url: 'https://github.com/BigTsung/sticker-generator' }]
+    links: [
+      { type: 'store', url: 'https://store.line.me/stickershop/author/5812261/zh-Hant' },
+      { type: 'github', url: 'https://github.com/BigTsung/sticker-generator' }
+    ]
   },
   {
     id: 'starttrackingmeals',
@@ -229,5 +232,6 @@ const LINK_META = {
   video:  { labelKey: 'watch-video',            icon: 'fa-solid fa-play' },
   github: { labelKey: 'view-project-on-GitHub', icon: 'fa-brands fa-github' },
   news:   { labelKey: 'read-news',              icon: 'fa-solid fa-newspaper' },
-  paper:  { labelKey: 'read-paper',             icon: 'fa-solid fa-file-lines' }
+  paper:  { labelKey: 'read-paper',             icon: 'fa-solid fa-file-lines' },
+  store:  { labelKey: 'view-stickers',          icon: 'fa-brands fa-line' }
 };
