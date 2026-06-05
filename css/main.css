@@ -551,6 +551,41 @@ html[data-theme="dark"] .proj-card__bg { opacity: .38; }
 /* ----------------------------- Interests -------------------------------- */
 .interests-text { max-width: 820px; margin: 0 auto 32px; color: var(--text-soft); text-align: center; }
 .interests-text p { margin: 0 0 14px; }
+
+/* interests split into categories */
+.interest-feature { max-width: 980px; margin: 0 auto 24px; }
+.interest-feature > h3 { display: flex; align-items: center; gap: 10px; font-size: 1.3rem; margin: 0 0 8px; }
+.interest-feature > h3 i { color: var(--brand); }
+.interest-feature > p { color: var(--text-soft); max-width: 72ch; margin: 0 0 22px; }
+.interests-cats { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; max-width: 980px; margin: 0 auto; }
+.skill-card p { color: var(--text-soft); font-size: .92rem; margin: 0; }
+/* horizontal filmstrip — scales nicely as more photos are added */
+.photo-strip {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: var(--border) transparent;
+}
+.photo-strip img {
+  height: 240px;
+  width: auto;
+  flex: 0 0 auto;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  cursor: zoom-in;
+  scroll-snap-align: start;
+  border: 1px solid var(--border);
+  transition: transform .3s, box-shadow .3s;
+}
+.photo-strip img:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.photo-strip::-webkit-scrollbar { height: 8px; }
+.photo-strip::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+.photo-strip::-webkit-scrollbar-track { background: transparent; }
+@media (max-width: 620px) { .photo-strip img { height: 180px; } }
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

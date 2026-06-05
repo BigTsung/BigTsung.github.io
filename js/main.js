@@ -35,8 +35,8 @@
 
   async function loadDicts() {
     const [en, zh] = await Promise.all([
-      fetch('assets/translations/en.json?v=12').then((r) => r.json()),
-      fetch('assets/translations/zh.json?v=12').then((r) => r.json())
+      fetch('assets/translations/en.json?v=17').then((r) => r.json()),
+      fetch('assets/translations/zh.json?v=17').then((r) => r.json())
     ]);
     DICTS.en = en;
     DICTS.zh = zh;
@@ -131,6 +131,18 @@
         <div class="chips">${chips}</div>
       </div>`;
     }).join('');
+  }
+
+  /* ----------------------------- Photo strip ---------------------------- */
+  function renderGallery() {
+    const strip = document.getElementById('photoStrip');
+    if (!strip || typeof PHOTOS === 'undefined') return;
+    strip.innerHTML = PHOTOS.map(
+      (f) => `<img src="${PHOTO_DIR + f}" alt="Photography" loading="lazy">`
+    ).join('');
+    strip.querySelectorAll('img').forEach((im) =>
+      im.addEventListener('click', () => openLightbox(im.src))
+    );
   }
 
   function filterProjects(key) {
@@ -312,6 +324,7 @@
     safe(renderFilters);
     safe(renderProjects);
     safe(renderSkills);
+    safe(renderGallery);
     safe(initExperienceToggles);
     // initScrollUX last: it observes .reveal elements, including the
     // dynamically rendered skill cards, so they must exist by now.

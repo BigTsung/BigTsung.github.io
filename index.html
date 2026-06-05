@@ -43,7 +43,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
         rel="stylesheet" />
 
-    <link href="css/main.css?v=10" rel="stylesheet" />
+    <link href="css/main.css?v=17" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -353,20 +353,27 @@
                 <h2 class="section__title" data-i18n="interests-title">Interests</h2>
             </div>
 
-            <div class="interests-text reveal">
-                <p data-i18n="interests-paragraph-1"></p>
-                <p data-i18n="interests-paragraph-2"></p>
-                <p data-i18n="interests-paragraph-3"></p>
+            <!-- Photography (featured, with gallery) -->
+            <div class="interest-feature reveal">
+                <h3><i class="fa-solid fa-camera"></i><span data-i18n="interest-photo-title">Photography</span></h3>
+                <p data-i18n="interest-photo-desc"></p>
+                <div class="photo-strip" id="photoStrip"></div>
             </div>
 
-            <div class="gallery reveal">
-                <img src="assets/img/photography/IMG_3357.JPG" alt="Photography" loading="lazy">
-                <img src="assets/img/photography/IMG_3720.JPG" alt="Photography" loading="lazy">
-                <img src="assets/img/photography/IMG_3772.JPG" alt="Photography" loading="lazy">
-                <img src="assets/img/photography/IMG_3775.JPG" alt="Photography" loading="lazy">
-                <img src="assets/img/photography/IMG_3781.JPG" alt="Photography" loading="lazy">
-                <img src="assets/img/photography/IMG_6300.JPG" alt="Photography" loading="lazy">
-                <img src="assets/img/photography/IMG_6801.JPG" alt="Photography" loading="lazy">
+            <!-- Cycling · Reading · DIY -->
+            <div class="interests-cats reveal">
+                <div class="skill-card">
+                    <h3><i class="fa-solid fa-bicycle"></i><span data-i18n="interest-cycling-title">Cycling</span></h3>
+                    <p data-i18n="interest-cycling-desc"></p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fa-solid fa-book-open"></i><span data-i18n="interest-reading-title">Reading</span></h3>
+                    <p data-i18n="interest-reading-desc"></p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fa-solid fa-screwdriver-wrench"></i><span data-i18n="interest-diy-title">Tinkering & DIY</span></h3>
+                    <p data-i18n="interest-diy-desc"></p>
+                </div>
             </div>
         </div>
     </section>
@@ -409,9 +416,10 @@
         <img src="" alt="">
     </div>
 
-    <script src="js/projects-data.js?v=10"></script>
-    <script src="js/skills-data.js?v=13"></script>
-    <script src="js/main.js?v=10"></script>
+    <script src="js/projects-data.js?v=17"></script>
+    <script src="js/skills-data.js?v=17"></script>
+    <script src="js/photos-data.js?v=17"></script>
+    <script src="js/main.js?v=17"></script>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 
