@@ -557,8 +557,67 @@ html[data-theme="dark"] .proj-card__bg { opacity: .38; }
 .interest-feature > h3 { display: flex; align-items: center; gap: 10px; font-size: 1.3rem; margin: 0 0 8px; }
 .interest-feature > h3 i { color: var(--brand); }
 .interest-feature > p { color: var(--text-soft); max-width: 72ch; margin: 0 0 22px; }
-.interests-cats { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; max-width: 980px; margin: 0 auto; }
+.interests-cats { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; max-width: 980px; margin: 0 auto 24px; }
 .skill-card p { color: var(--text-soft); font-size: .92rem; margin: 0; }
+
+/* reading log (live from spreadsheet) */
+.reading-log-label { font-weight: 700; font-size: .9rem; color: var(--text); margin: 4px 0 12px; }
+.reading-log {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+.reading-loading { color: var(--text-mute); font-size: .9rem; margin: 0; }
+.reading-year {
+  flex: 0 0 270px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  max-height: 340px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+}
+.reading-year__head { flex: 0 0 auto; display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 10px; }
+.reading-year__head .ry { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--brand); }
+.reading-year__head .rn {
+  font-size: .72rem; font-weight: 700; color: var(--text-mute);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 999px; padding: 2px 9px;
+}
+.reading-list {
+  margin: 0; padding: 0;
+  list-style: none;
+  font-size: .85rem; color: var(--text-soft);
+  overflow-y: auto;
+}
+.reading-list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 8px 8px;
+  line-height: 1.4;
+  border-radius: 8px;
+  transition: background .15s, color .15s;
+}
+.reading-list li + li { border-top: 1px solid var(--border); }
+.reading-list li:hover { background: var(--surface); color: var(--text); }
+.ri-num {
+  flex: 0 0 auto;
+  min-width: 22px;
+  font-family: var(--font-display);
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--brand);
+  padding-top: 1px;
+}
+.ri-title { flex: 1; }
+.reading-log::-webkit-scrollbar, .reading-list::-webkit-scrollbar { height: 8px; width: 8px; }
+.reading-log::-webkit-scrollbar-thumb, .reading-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
 /* horizontal filmstrip — scales nicely as more photos are added */
 .photo-strip {
   display: flex;

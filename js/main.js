@@ -35,8 +35,8 @@
 
   async function loadDicts() {
     const [en, zh] = await Promise.all([
-      fetch('assets/translations/en.json?v=17').then((r) => r.json()),
-      fetch('assets/translations/zh.json?v=17').then((r) => r.json())
+      fetch('assets/translations/en.json?v=18').then((r) => r.json()),
+      fetch('assets/translations/zh.json?v=18').then((r) => r.json())
     ]);
     DICTS.en = en;
     DICTS.zh = zh;
@@ -143,6 +143,74 @@
     strip.querySelectorAll('img').forEach((im) =>
       im.addEventListener('click', () => openLightbox(im.src))
     );
+  }
+
+  /* ----------------------------- Reading log ---------------------------- */
+  // minimal RFC-4180 CSV parser (handles quotes, embedded commas/newlines)
+  function parseCSV(text) {
+    const rows = []; let row = [], field = '', inQ = false;
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i];
+      if (inQ) {
+        if (c === '"') { if (text[i + 1] === '"') { field += '"'; i++; } else inQ = false; }
+        else field += c;
+      } else if (c === '"') inQ = true;
+      else if (c === ',') { row.push(field); field = ''; }
+      else if (c === '\n') { row.push(field); rows.push(row); row = []; field = ''; }
+      else if (c !== '\r') field += c;
+    }
+    if (field.length || row.length) { row.push(field); rows.push(row); }
+    return rows;
+  }
+
+  const READING_CACHE_KEY = 'readingCache.v1';
+  const READING_TTL = 6 * 60 * 60 * 1000;   // 6h — re-fetch at most this often per browser
+
+  function paintReading(log, years) {
+    log.innerHTML = years.filter((r) => r.books.length).map((r) => `
+      <div class="reading-year">
+        <div class="reading-year__head"><span class="ry">${r.year}</span><span class="rn">${r.books.length}</span></div>
+        <ul class="reading-list">${r.books.map((b, i) =>
+          `<li><span class="ri-num">${String(i + 1).padStart(2, '0')}</span><span class="ri-title">${escapeHtml(b)}</span></li>`
+        ).join('')}</ul>
+      </div>`).join('');
+  }
+
+  async function fetchReading() {
+    const results = await Promise.all(READING_YEARS.map(async ({ year, gid }) => {
+      const url = `https://docs.google.com/spreadsheets/d/${READING_SHEET_ID}/gviz/tq?tqx=out:csv&gid=${gid}`;
+      const txt = await fetch(url).then((r) => r.text());
+      const books = parseCSV(txt).slice(1)                // skip header/leftover row
+        .filter((r) => (r[1] || '').trim() === '完' && (r[0] || '').trim() && (r[0] || '').trim() !== '書名')
+        .map((r) => r[0].trim());
+      return { year, books };
+    }));
+    results.sort((a, b) => b.year.localeCompare(a.year));
+    return results;
+  }
+
+  async function renderReading() {
+    const log = document.getElementById('readingLog');
+    if (!log || typeof READING_YEARS === 'undefined') return;
+
+    let cached = null;
+    try { cached = JSON.parse(localStorage.getItem(READING_CACHE_KEY) || 'null'); } catch (e) { /* ignore */ }
+
+    // fresh cache → render from it, make zero network requests
+    if (cached && cached.years && (Date.now() - cached.ts) < READING_TTL) {
+      paintReading(log, cached.years);
+      return;
+    }
+
+    try {
+      const years = await fetchReading();
+      paintReading(log, years);
+      try { localStorage.setItem(READING_CACHE_KEY, JSON.stringify({ ts: Date.now(), years })); } catch (e) { /* ignore */ }
+    } catch (e) {
+      console.error('renderReading', e);
+      if (cached && cached.years) paintReading(log, cached.years);   // fall back to stale cache
+      else log.innerHTML = '';
+    }
   }
 
   function filterProjects(key) {
@@ -325,6 +393,7 @@
     safe(renderProjects);
     safe(renderSkills);
     safe(renderGallery);
+    renderReading();   // async, fetches the spreadsheet — fire and forget
     safe(initExperienceToggles);
     // initScrollUX last: it observes .reveal elements, including the
     // dynamically rendered skill cards, so they must exist by now.
