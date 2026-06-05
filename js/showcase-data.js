@@ -44,7 +44,7 @@ const SHOWCASE = [
     type: 'sticker',
     nameKey: 'show-stickers-name',
     descKey: 'show-stickers-desc',
-    img: 'Project_StickerGenerator_success.png',
+    img: 'Project_StickerGenerator-line-stickers.png',
     tags: ['LINE', 'Python'],
     url: 'https://store.line.me/stickershop/author/5812261/zh-Hant'
   }
