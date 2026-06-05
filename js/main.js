@@ -35,8 +35,8 @@
 
   async function loadDicts() {
     const [en, zh] = await Promise.all([
-      fetch('assets/translations/en.json?v=18').then((r) => r.json()),
-      fetch('assets/translations/zh.json?v=18').then((r) => r.json())
+      fetch('assets/translations/en.json?v=23').then((r) => r.json()),
+      fetch('assets/translations/zh.json?v=23').then((r) => r.json())
     ]);
     DICTS.en = en;
     DICTS.zh = zh;
@@ -131,6 +131,52 @@
         <div class="chips">${chips}</div>
       </div>`;
     }).join('');
+  }
+
+  /* ----------------------------- Showcase ------------------------------- */
+  function renderShowcase() {
+    const grid = document.getElementById('showcaseGrid');
+    if (!grid || typeof SHOWCASE === 'undefined') return;
+    grid.innerHTML = SHOWCASE.map((s) => {
+      const img = SHOWCASE_DIR + s.img;
+      const tags = (s.tags || []).map((tg) => `<span class="tag">${tg}</span>`).join('');
+      const badge = s.type === 'sticker'
+        ? `<span class="store-badge store-badge--line"><i class="fa-brands fa-line"></i>LINE STORE</span>`
+        : `<span class="store-badge"><i class="fa-brands fa-app-store-ios"></i>App Store</span>`;
+      return `
+      <a class="show-card" href="${s.url}" target="_blank" rel="noopener" data-type="${s.type}">
+        <div class="show-card__media">
+          <span class="show-card__bg" style="background-image:url('${img}')"></span>
+          <img src="${img}" alt="" loading="lazy">
+          <span class="show-card__live"><span class="dot"></span><span data-i18n="show-live">Live</span></span>
+        </div>
+        <div class="show-card__body">
+          <h3 data-i18n="${s.nameKey}"></h3>
+          <p data-i18n="${s.descKey}"></p>
+          <div class="proj-card__tags">${tags}</div>
+          ${badge}
+        </div>
+      </a>`;
+    }).join('');
+  }
+
+  function initShowcaseFX() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.querySelectorAll('.show-card').forEach((card) => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width;
+        const py = (e.clientY - r.top) / r.height;
+        card.style.setProperty('--ry', (px * 14 - 7).toFixed(2) + 'deg');
+        card.style.setProperty('--rx', (7 - py * 14).toFixed(2) + 'deg');
+        card.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+        card.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+      });
+    });
   }
 
   /* ----------------------------- Photo strip ---------------------------- */
@@ -392,6 +438,8 @@
     safe(renderFilters);
     safe(renderProjects);
     safe(renderSkills);
+    safe(renderShowcase);
+    safe(initShowcaseFX);
     safe(renderGallery);
     renderReading();   // async, fetches the spreadsheet — fire and forget
     safe(initExperienceToggles);
