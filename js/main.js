@@ -17,9 +17,11 @@
   const escapeHtml = (s) =>
     s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-  // light markdown: **bold** -> <strong>
+  // light markdown: **bold** -> <strong>, newlines -> <br>
   const mdBold = (s) =>
-    escapeHtml(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    escapeHtml(s)
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\n/g, '<br>');
 
   function applyLang() {
     document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
@@ -35,8 +37,8 @@
 
   async function loadDicts() {
     const [en, zh] = await Promise.all([
-      fetch('assets/translations/en.json?v=23').then((r) => r.json()),
-      fetch('assets/translations/zh.json?v=23').then((r) => r.json())
+      fetch('assets/translations/en.json?v=25').then((r) => r.json()),
+      fetch('assets/translations/zh.json?v=25').then((r) => r.json())
     ]);
     DICTS.en = en;
     DICTS.zh = zh;

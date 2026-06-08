@@ -129,6 +129,15 @@ const PROJECTS = [
 
   /* ---------------- Personal / Weekend ---------------- */
   {
+    id: 'dailymarketcard',
+    category: 'personal',
+    titleKey: 'project-dailymarketcard-title',
+    descKey: 'project-dailymarketcard-description',
+    tags: ['Python', 'Claude AI', 'GitHub Actions', 'Playwright', 'yfinance'],
+    images: ['Project_DailyMarketCard.png'],
+    links: [{ type: 'github', url: 'https://github.com/BigTsung/daily-market-card' }]
+  },
+  {
     id: 'stockanalysis',
     category: 'personal',
     titleKey: 'project-stockanalysis-title',
