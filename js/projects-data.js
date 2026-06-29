@@ -129,6 +129,16 @@ const PROJECTS = [
 
   /* ---------------- Personal / Weekend ---------------- */
   {
+    id: 'optionsdemystified',
+    category: 'personal',
+    titleKey: 'project-optionsdemystified-title',
+    descKey: 'project-optionsdemystified-description',
+    tags: ['Next.js 16', 'React 19', 'TypeScript', 'D3', 'Supabase', 'Cloudflare'],
+    thumb: 'Project_OptionsDemystified_home.png',
+    images: ['Project_OptionsDemystified_home.png', 'Project_OptionsDemystified_payoff.png', 'Project_OptionsDemystified_greeks.png', 'Project_OptionsDemystified_builder.png'],
+    links: [{ type: 'live', url: 'https://options-demystified.chiugastudio.workers.dev/' }]
+  },
+  {
     id: 'dailymarketcard',
     category: 'personal',
     titleKey: 'project-dailymarketcard-title',
@@ -248,6 +258,7 @@ const CATEGORY_ORDER = { personal: 0, industry: 1, academic: 2 };
 /* Link type -> { translation key, icon } for buttons inside the project modal. */
 const LINK_META = {
   video:  { labelKey: 'watch-video',            icon: 'fa-solid fa-play' },
+  live:   { labelKey: 'view-live-site',         icon: 'fa-solid fa-arrow-up-right-from-square' },
   github: { labelKey: 'view-project-on-GitHub', icon: 'fa-brands fa-github' },
   news:   { labelKey: 'read-news',              icon: 'fa-solid fa-newspaper' },
   paper:  { labelKey: 'read-paper',             icon: 'fa-solid fa-file-lines' },

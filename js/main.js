@@ -37,8 +37,8 @@
 
   async function loadDicts() {
     const [en, zh] = await Promise.all([
-      fetch('assets/translations/en.json?v=25').then((r) => r.json()),
-      fetch('assets/translations/zh.json?v=25').then((r) => r.json())
+      fetch('assets/translations/en.json?v=26').then((r) => r.json()),
+      fetch('assets/translations/zh.json?v=26').then((r) => r.json())
     ]);
     DICTS.en = en;
     DICTS.zh = zh;
