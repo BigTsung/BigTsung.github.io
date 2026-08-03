@@ -129,6 +129,24 @@ const PROJECTS = [
 
   /* ---------------- Personal / Weekend ---------------- */
   {
+    id: 'stockdataviz',
+    category: 'personal',
+    titleKey: 'project-stockdataviz-title',
+    descKey: 'project-stockdataviz-description',
+    tags: ['Remotion', 'React', 'TypeScript', 'Python', 'Flask', 'yfinance'],
+    thumb: 'Project_StockDataViz_demo.gif',
+    images: [
+      'Project_StockDataViz_studio.png',
+      'Project_StockDataViz_demo.gif',
+      'Project_StockDataViz_guess.png',
+      'Project_StockDataViz_missed.png',
+      'Project_StockDataViz_drawdown.png',
+      'Project_StockDataViz_heatmap.png',
+      'Project_StockDataViz_dca.png'
+    ],
+    links: []
+  },
+  {
     id: 'optionsdemystified',
     category: 'personal',
     titleKey: 'project-optionsdemystified-title',
