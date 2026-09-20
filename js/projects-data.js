@@ -129,6 +129,21 @@ const PROJECTS = [
 
   /* ---------------- Personal / Weekend ---------------- */
   {
+    id: 'quotehoarder',
+    category: 'personal',
+    titleKey: 'project-quotehoarder-title',
+    descKey: 'project-quotehoarder-description',
+    tags: ['SwiftUI', 'iOS', 'Share Extension', 'App Intents', 'Vision'],
+    thumb: 'Project_QuoteHoarder_promo_zh.png',
+    images: [
+      'Project_QuoteHoarder_promo_zh.png',
+      'Project_QuoteHoarder_promo_en.png',
+      'Project_QuoteHoarder_app_zh.png',
+      'Project_QuoteHoarder_app_en.png'
+    ],
+    links: [{ type: 'github', url: 'https://github.com/BigTsung/cluster-box' }]
+  },
+  {
     id: 'stockdataviz',
     category: 'personal',
     titleKey: 'project-stockdataviz-title',
