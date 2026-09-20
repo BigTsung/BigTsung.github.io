@@ -20,8 +20,8 @@ const SHOWCASE = [
     type: 'app',
     nameKey: 'show-record-name',
     descKey: 'show-record-desc',
-    img: 'Project_RecordYourLove_5.png',
-    tags: ['iOS', 'Swift'],
+    img: 'Project_RecordYourLove_promo_square_v3.webp',
+    tags: ['iOS', 'SwiftUI', 'Core Data'],
     url: 'https://apps.apple.com/tw/app/%E8%A8%98%E8%AE%80%E4%BD%A0%E7%9A%84%E6%84%9B-%E8%A8%98%E9%8C%84%E6%94%B6%E8%97%8F-%E6%94%B6%E8%97%8F%E8%A8%98%E9%8C%84/id6740759782'
   },
   {

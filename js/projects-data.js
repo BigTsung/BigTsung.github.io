@@ -216,9 +216,21 @@ const PROJECTS = [
     category: 'personal',
     titleKey: 'project-TagandTrack-title',
     descKey: 'project-TagandTrack-description',
-    tags: ['Swift', 'Xcode', 'Barcode Scan'],
-    images: ['Project_RecordYourLove_5.png', 'Project_RecordYourLove_1.PNG', 'Project_RecordYourLove_2.PNG', 'Project_RecordYourLove_3.png', 'Project_RecordYourLove_4.png'],
-    links: []
+    tags: ['SwiftUI', 'Vision', 'Core Data', 'WidgetKit', 'StoreKit 2'],
+    thumb: 'Project_RecordYourLove_promo_square_v3.webp',
+    images: [
+      'Project_RecordYourLove_promo_square_v3.webp',
+      'Project_RecordYourLove_raw_zh_collection.webp',
+      'Project_RecordYourLove_raw_zh_scanner.webp',
+      'Project_RecordYourLove_raw_zh_catalog.webp',
+      'Project_RecordYourLove_raw_zh_new-arrivals.webp',
+      'Project_RecordYourLove_raw_zh_wishlist.webp',
+      'Project_RecordYourLove_raw_zh_statistics.webp',
+      'Project_RecordYourLove_raw_zh_achievements.webp',
+      'Project_RecordYourLove_raw_zh_share.webp',
+      'Project_RecordYourLove_raw_zh_settings.webp'
+    ],
+    links: [{ type: 'appstore', url: 'https://apps.apple.com/app/id6740759782' }]
   },
   {
     id: 'didyousmiletoday',
@@ -295,5 +307,6 @@ const LINK_META = {
   github: { labelKey: 'view-project-on-GitHub', icon: 'fa-brands fa-github' },
   news:   { labelKey: 'read-news',              icon: 'fa-solid fa-newspaper' },
   paper:  { labelKey: 'read-paper',             icon: 'fa-solid fa-file-lines' },
+  appstore: { labelKey: 'view-app-store',        icon: 'fa-brands fa-app-store-ios' },
   store:  { labelKey: 'view-stickers',          icon: 'fa-brands fa-line' }
 };

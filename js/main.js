@@ -37,8 +37,8 @@
 
   async function loadDicts() {
     const [en, zh] = await Promise.all([
-      fetch('assets/translations/en.json?v=27').then((r) => r.json()),
-      fetch('assets/translations/zh.json?v=27').then((r) => r.json())
+      fetch('assets/translations/en.json?v=29').then((r) => r.json()),
+      fetch('assets/translations/zh.json?v=29').then((r) => r.json())
     ]);
     DICTS.en = en;
     DICTS.zh = zh;
@@ -66,6 +66,7 @@
   /* ----------------------------- Projects ------------------------------- */
   const catClass = { industry: 'cat-industry', academic: 'cat-academic', personal: 'cat-personal' };
   const catLabelKey = { industry: 'industry-project', academic: 'academic-project', personal: 'weekend-project' };
+  const projectImages = (project) => project.imagesByLang?.[lang] || project.images;
 
   function renderFilters() {
     const wrap = document.getElementById('filters');
@@ -89,7 +90,8 @@
       (a, b) => CATEGORY_ORDER[a.category] - CATEGORY_ORDER[b.category]
     );
     grid.innerHTML = ordered.map((p) => {
-      const img = PROJECT_IMG + (p.thumb || p.images[0]);   // optional custom card cover
+      const images = projectImages(p);
+      const img = PROJECT_IMG + (p.thumb || images[0]);   // optional custom card cover
       const tags = p.tags.slice(0, 4).map((tg) => `<span class="tag">${tg}</span>`).join('');
       const award = p.award
         ? `<span class="proj-card__award"><i class="fa-solid fa-trophy"></i><span data-i18n="award-text"></span></span>`
@@ -140,7 +142,7 @@
     const grid = document.getElementById('showcaseGrid');
     if (!grid || typeof SHOWCASE === 'undefined') return;
     grid.innerHTML = SHOWCASE.map((s) => {
-      const img = SHOWCASE_DIR + s.img;
+      const img = SHOWCASE_DIR + (s.imgByLang?.[lang] || s.img);
       const tags = (s.tags || []).map((tg) => `<span class="tag">${tg}</span>`).join('');
       const badge = s.type === 'sticker'
         ? `<span class="store-badge store-badge--line"><i class="fa-brands fa-line"></i>LINE STORE</span>`
@@ -282,8 +284,9 @@
       ? `<div class="modal__media"><iframe src="https://www.youtube.com/embed/${videoLink.id}" title="video" allowfullscreen></iframe></div>`
       : '';
 
-    const gallery = p.images.length
-      ? `<div class="modal__gallery">${p.images
+    const images = projectImages(p);
+    const gallery = images.length
+      ? `<div class="modal__gallery">${images
           .map((im) => `<img src="${PROJECT_IMG + im}" alt="" loading="lazy" data-lb>`)
           .join('')}</div>`
       : '';
@@ -325,12 +328,14 @@
     );
 
     applyLang();
+    modal.dataset.projectId = id;
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
 
   function closeModal() {
     modal.classList.remove('open');
+    delete modal.dataset.projectId;
     modal.querySelector('.modal__box').innerHTML = '';   // stops any playing video
     document.body.style.overflow = '';
   }
@@ -411,6 +416,14 @@
       lang = lang === 'en' ? 'zh' : 'en';
       localStorage.setItem('lang', lang);
       applyLang();
+      const activeFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
+      renderProjects();
+      filterProjects(activeFilter);
+      renderShowcase();
+      initShowcaseFX();
+      if (modal.classList.contains('open') && modal.dataset.projectId) {
+        openProjectModal(modal.dataset.projectId);
+      }
     });
   }
 
