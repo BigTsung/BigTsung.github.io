@@ -10,6 +10,17 @@ const SHOWCASE_DIR = 'assets/img/projects/';
 const SHOWCASE = [
   {
     type: 'app',
+    nameKey: 'show-quotehoarder-name',
+    descKey: 'show-quotehoarder-desc',
+    imgByLang: {
+      zh: 'Project_QuoteHoarder_promo_zh.png',
+      en: 'Project_QuoteHoarder_promo_en.png'
+    },
+    tags: ['iOS', 'SwiftUI', 'Share Extension', 'Vision'],
+    url: 'https://apps.apple.com/tw/app/%E9%9A%A8%E6%8B%BE%E5%8F%A5-%E6%96%87%E5%AD%97%E5%89%AA%E8%97%8F%E8%88%87%E9%9D%88%E6%84%9F%E7%AD%86%E8%A8%98/id6812375618'
+  },
+  {
+    type: 'app',
     nameKey: 'show-meals-name',
     descKey: 'show-meals-desc',
     img: 'Project_StartTrackingMeals_app.png',

@@ -37,8 +37,8 @@
 
   async function loadDicts() {
     const [en, zh] = await Promise.all([
-      fetch('assets/translations/en.json?v=29').then((r) => r.json()),
-      fetch('assets/translations/zh.json?v=29').then((r) => r.json())
+      fetch('assets/translations/en.json?v=30').then((r) => r.json()),
+      fetch('assets/translations/zh.json?v=30').then((r) => r.json())
     ]);
     DICTS.en = en;
     DICTS.zh = zh;
@@ -415,11 +415,11 @@
     document.getElementById('langBtn')?.addEventListener('click', () => {
       lang = lang === 'en' ? 'zh' : 'en';
       localStorage.setItem('lang', lang);
-      applyLang();
       const activeFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
       renderProjects();
       filterProjects(activeFilter);
       renderShowcase();
+      applyLang();
       initShowcaseFX();
       if (modal.classList.contains('open') && modal.dataset.projectId) {
         openProjectModal(modal.dataset.projectId);
