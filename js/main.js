@@ -37,8 +37,8 @@
 
   async function loadDicts() {
     const [en, zh] = await Promise.all([
-      fetch('assets/translations/en.json?v=26').then((r) => r.json()),
-      fetch('assets/translations/zh.json?v=26').then((r) => r.json())
+      fetch('assets/translations/en.json?v=27').then((r) => r.json()),
+      fetch('assets/translations/zh.json?v=27').then((r) => r.json())
     ]);
     DICTS.en = en;
     DICTS.zh = zh;
@@ -432,11 +432,12 @@
   function safe(fn) { try { fn(); } catch (e) { console.error(fn.name, e); } }
 
   async function boot() {
-    // Visual + navigation first, so the page is never left blank if a
-    // later step (e.g. project rendering) throws.
+    // Initialize the static shell first, then wait for translations before
+    // rendering dynamic cards so titles and descriptions never flash empty.
     safe(initTheme);
     safe(initNav);
     safe(initGlobal);
+    try { await loadDicts(); } catch (e) { console.error('loadDicts', e); }
     safe(renderFilters);
     safe(renderProjects);
     safe(renderSkills);
@@ -448,7 +449,6 @@
     // initScrollUX last: it observes .reveal elements, including the
     // dynamically rendered skill cards, so they must exist by now.
     safe(initScrollUX);
-    try { await loadDicts(); } catch (e) { console.error('loadDicts', e); }
     safe(applyLang);
   }
 
